@@ -64,17 +64,44 @@ public class ChoSung_Game extends JFrame {
 		MainPage.add(GamePage);
 		GamePage.setLayout(null);
 		
-		GamePage.setVisible(false);
+		JPanel SelectTema = new JPanel();
+		SelectTema.setBounds(0, 0, 684, 461);
+		MainPage.add(SelectTema);
+		SelectTema.setLayout(null);
 		
 		StartBtn.addActionListener(new ActionListener() { // 게임 시작 버튼 활성화
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				StartPage.setVisible(false);
-				GamePage.setVisible(true);
+				SelectTema.setVisible(true);
 			}
 			
 		});
+		
+		JLabel TemaLabel = new JLabel("<테마 선택>");
+		TemaLabel.setBounds(255, 42, 173, 46);
+		TemaLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 35));
+		SelectTema.add(TemaLabel);
+		
+		JButton Tema1_BrandBtn = new JButton("브랜드");
+		Tema1_BrandBtn.setBounds(294, 127, 97, 23);
+		SelectTema.add(Tema1_BrandBtn);
+		
+		
+		Tema1_BrandBtn.addActionListener(new ActionListener() { // 테마 선택 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				SelectTema.setVisible(false);
+				GamePage.setVisible(true);
+				
+			}
+			
+		});
+		
+		
+		GamePage.setVisible(false);
 		
 		JPanel Game1 = new JPanel();
 		Game1.setBounds(0, 0, 684, 461);
