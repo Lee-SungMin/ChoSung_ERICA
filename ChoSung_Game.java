@@ -16,6 +16,7 @@ public class ChoSung_Game extends JFrame {
 
 	private JPanel MainPage;
 	private JTextField Game1AnsBlank;
+	private JTextField Game2AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -49,11 +50,6 @@ public class ChoSung_Game extends JFrame {
 		MainPage.add(StartPage);
 		StartPage.setLayout(null);
 		
-		JPanel GamePage = new JPanel();
-		GamePage.setBounds(0, 0, 684, 461);
-		MainPage.add(GamePage);
-		GamePage.setLayout(null);
-		
 		JLabel StartLabel = new JLabel("초성퀴즈");
 		StartLabel.setBounds(247, 127, 173, 78);
 		StartLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
@@ -62,6 +58,11 @@ public class ChoSung_Game extends JFrame {
 		JButton StartBtn = new JButton("시작하기");
 		StartBtn.setBounds(286, 346, 97, 23);
 		StartPage.add(StartBtn);
+		
+		JPanel GamePage = new JPanel();
+		GamePage.setBounds(0, 0, 684, 461);
+		MainPage.add(GamePage);
+		GamePage.setLayout(null);
 		
 		GamePage.setVisible(false);
 		
@@ -75,18 +76,22 @@ public class ChoSung_Game extends JFrame {
 			
 		});
 		
-		
 		JPanel Game1 = new JPanel();
 		Game1.setBounds(0, 0, 684, 461);
 		GamePage.add(Game1);
 		Game1.setLayout(null);
+		
+		JPanel Game2 = new JPanel();
+		Game2.setBounds(0, 0, 684, 461);
+		GamePage.add(Game2);
+		Game2.setLayout(null);
 		
 		JLabel StepGame1 = new JLabel("문제 1");
 		StepGame1.setBounds(38, 33, 90, 39);
 		StepGame1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
 		Game1.add(StepGame1);
 		
-		JLabel Game1Quiz = new JLabel("\u3131\u3134");
+		JLabel Game1Quiz = new JLabel("ㄱㄴ");
 		Game1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1Quiz.setBounds(185, 159, 81, 87);
 		Game1.add(Game1Quiz);
@@ -100,16 +105,6 @@ public class ChoSung_Game extends JFrame {
 		JButton Game1AnsBtn = new JButton("제출하기");
 		Game1AnsBtn.setBounds(340, 352, 121, 39);
 		Game1.add(Game1AnsBtn);
-		
-		JPanel Game2 = new JPanel();
-		Game2.setBounds(0, 0, 684, 461);
-		GamePage.add(Game2);
-		Game2.setLayout(null);
-		
-		JLabel StepGame2 = new JLabel("문제 2");
-		StepGame2.setBounds(38, 33, 90, 39);
-		StepGame2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
-		Game2.add(StepGame2);
 		
 		Game1AnsBtn.addActionListener(new ActionListener() { // 문제 1 정답 확인
 
@@ -125,6 +120,27 @@ public class ChoSung_Game extends JFrame {
 			}
 			
 		});
+		
+		
+		JLabel StepGame2 = new JLabel("문제 2");
+		StepGame2.setBounds(38, 33, 90, 39);
+		StepGame2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		Game2.add(StepGame2);
+		
+		JLabel Game2Quiz = new JLabel("ㅅㅅ");
+		Game2Quiz.setBounds(185, 159, 81, 87);
+		Game2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game2.add(Game2Quiz);
+		
+		Game2AnsBlank = new JTextField();
+		Game2AnsBlank.setText("이곳에 정답을 입력하세요");
+		Game2AnsBlank.setBounds(153, 352, 147, 39);
+		Game2.add(Game2AnsBlank);
+		Game2AnsBlank.setColumns(10);
+		
+		JButton Game2AnsBtn = new JButton("제출하기");
+		Game2AnsBtn.setBounds(340, 352, 121, 39);
+		Game2.add(Game2AnsBtn);
 		
 		
 	}
