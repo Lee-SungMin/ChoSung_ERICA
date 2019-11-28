@@ -16,6 +16,8 @@ import java.awt.Color;
 import java.awt.SystemColor;
 
 public class ChoSung_Game extends JFrame {
+	
+	public int Score; // 총 점수
 
 	private JPanel MainPage;
 	private JTextField Game1AnsBlank;
@@ -41,6 +43,7 @@ public class ChoSung_Game extends JFrame {
 	 * Create the frame.
 	 */
 	public ChoSung_Game() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(650, 300, 700, 500);
 		MainPage = new JPanel();
@@ -133,7 +136,7 @@ public class ChoSung_Game extends JFrame {
 		StartBackBtn1.setBounds(482, 404, 110, 23);
 		GameExpPage.add(StartBackBtn1);
 		
-		StartBackBtn1.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+		StartBackBtn1.addActionListener(new ActionListener() { // 메인화면으로 돌아가는 버튼 활성화
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -152,6 +155,7 @@ public class ChoSung_Game extends JFrame {
 		JButton Tema1_BrandBtn = new JButton("브랜드");
 		Tema1_BrandBtn.setBounds(294, 127, 97, 23);
 		SelectTemaPage.add(Tema1_BrandBtn);
+		
 		
 		JPanel GamePage = new JPanel();
 		GamePage.setBounds(0, 0, 684, 461);
@@ -175,12 +179,12 @@ public class ChoSung_Game extends JFrame {
 		JPanel Game1 = new JPanel();
 		Game1.setBounds(0, 0, 684, 461);
 		GamePage.add(Game1);
-		Game1.setLayout(null);
 		
 		JPanel Game2 = new JPanel();
 		Game2.setBounds(0, 0, 684, 461);
 		GamePage.add(Game2);
 		Game2.setLayout(null);
+		Game1.setLayout(null);
 		
 		JLabel StepGame1 = new JLabel("문제 1");
 		StepGame1.setBounds(38, 33, 90, 39);
@@ -188,35 +192,24 @@ public class ChoSung_Game extends JFrame {
 		Game1.add(StepGame1);
 		
 		JLabel Game1Quiz = new JLabel("ㄱㄴ");
-		Game1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1Quiz.setBounds(185, 159, 81, 87);
+		Game1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1.add(Game1Quiz);
 		
+		JLabel Game1Score = new JLabel("현재 점수 : 0");
+		Game1Score.setBounds(504, 37, 168, 39);
+		Game1Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game1.add(Game1Score);
+		
 		Game1AnsBlank = new JTextField();
-		Game1AnsBlank.setText("이곳에 정답을 입력하세요");
 		Game1AnsBlank.setBounds(153, 352, 147, 39);
+		Game1AnsBlank.setText("이곳에 정답을 입력하세요");
 		Game1.add(Game1AnsBlank);
 		Game1AnsBlank.setColumns(10);
 		
 		JButton Game1AnsBtn = new JButton("제출하기");
 		Game1AnsBtn.setBounds(340, 352, 121, 39);
 		Game1.add(Game1AnsBtn);
-		
-		Game1AnsBtn.addActionListener(new ActionListener() { // 문제 1 정답 확인
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String Answer = "가나";
-				if(Answer.equals(Game1AnsBlank.getText())) {
-					Game1.setVisible(false);
-					Game2.setVisible(true);
-				}
-				
-				
-			}
-			
-		});
-		
 		
 		JLabel StepGame2 = new JLabel("문제 2");
 		StepGame2.setBounds(38, 33, 90, 39);
@@ -228,6 +221,11 @@ public class ChoSung_Game extends JFrame {
 		Game2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game2.add(Game2Quiz);
 		
+		JLabel Game2Score = new JLabel("현재 점수 : 0");
+		Game2Score.setBounds(504, 37, 168, 39);
+		Game2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game2.add(Game2Score);
+		
 		Game2AnsBlank = new JTextField();
 		Game2AnsBlank.setText("이곳에 정답을 입력하세요");
 		Game2AnsBlank.setBounds(153, 352, 147, 39);
@@ -237,6 +235,28 @@ public class ChoSung_Game extends JFrame {
 		JButton Game2AnsBtn = new JButton("제출하기");
 		Game2AnsBtn.setBounds(340, 352, 121, 39);
 		Game2.add(Game2AnsBtn);
+		
+		Game1AnsBtn.addActionListener(new ActionListener() { // 문제 1 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "가나";
+				if(Answer.equals(Game1AnsBlank.getText())) {
+					Score += 10;
+					Game1.setVisible(false);
+					Game2.setVisible(true);
+					Game2Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game1Score.setText("현재 점수 : " + Score);
+				}
+				
+				
+			}
+			
+		});
+		
 		
 		
 	}
