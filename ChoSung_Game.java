@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -168,70 +170,101 @@ public class ChoSung_Game extends JFrame {
 		
 		GamePage.setVisible(false);
 		
-		StartBackBtn2.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				SelectTemaPage.setVisible(false);
-				GamePage.setVisible(false);
-				StartPage.setVisible(true);
-			}
-			
-		});
 		
-		Tema1_BrandBtn.addActionListener(new ActionListener() { // 테마 선택 버튼 활성화
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				SelectTemaPage.setVisible(false);
-				GamePage.setVisible(true);
-				
-			}
-			
-		});
+		JPanel Game1_1 = new JPanel();
+		Game1_1.setBounds(0, 0, 684, 461);
+		GamePage.add(Game1_1);
 		
-		
-		JPanel Game1 = new JPanel();
-		Game1.setBounds(0, 0, 684, 461);
-		GamePage.add(Game1);
-		
-		JPanel Game2 = new JPanel();
-		Game2.setBounds(0, 0, 684, 461);
-		GamePage.add(Game2);
-		Game2.setLayout(null);
-		Game1.setLayout(null);
+		JPanel Game1_2 = new JPanel();
+		Game1_2.setBounds(0, 0, 684, 461);
+		GamePage.add(Game1_2);
+		Game1_2.setLayout(null);
+		Game1_1.setLayout(null);
 		
 		JLabel StepGame1 = new JLabel("문제 1");
 		StepGame1.setBounds(38, 33, 90, 39);
 		StepGame1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
-		Game1.add(StepGame1);
+		Game1_1.add(StepGame1);
 		
 		JButton StartBackBtn3 = new JButton("시작 화면으로");
-		StartBackBtn3.setBounds(482, 404, 110, 23);
-		Game1.add(StartBackBtn3);
+		StartBackBtn3.setBounds(501, 44, 116, 31);
+		Game1_1.add(StartBackBtn3);
 		
 		JLabel Game1Quiz = new JLabel("ㄱㄴ");
 		Game1Quiz.setBounds(185, 159, 81, 87);
 		Game1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
-		Game1.add(Game1Quiz);
+		Game1_1.add(Game1Quiz);
 		
 		JLabel Game1Score = new JLabel("현재 점수 : 0");
-		Game1Score.setBounds(504, 37, 168, 39);
+		Game1Score.setBounds(307, 37, 168, 39);
 		Game1Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
-		Game1.add(Game1Score);
+		Game1_1.add(Game1Score);
 		
 		Game1AnsBlank = new JTextField();
-		Game1AnsBlank.setBounds(153, 352, 147, 39);
+		Game1AnsBlank.setBounds(70, 352, 230, 39);
 		Game1AnsBlank.setText("이곳에 정답을 입력하세요");
-		Game1.add(Game1AnsBlank);
+		Game1_1.add(Game1AnsBlank);
 		Game1AnsBlank.setColumns(10);
 		
 		
 		JButton Game1AnsBtn = new JButton("제출하기");
 		Game1AnsBtn.setBounds(340, 352, 121, 39);
-		Game1.add(Game1AnsBtn);
+		Game1_1.add(Game1AnsBtn);
 		
-		Game2.setVisible(false);
+		JButton Game1_1Hint1 = new JButton("힌트 1");
+		Game1_1Hint1.setBounds(520, 201, 97, 23);
+		Game1_1.add(Game1_1Hint1);
+		
+		Game1_1Hint1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) { // 게임 1-1. 힌트 1 버튼 활성화
+				
+				JOptionPane.showMessageDialog(null, "한글", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Score -= 3;
+				Game1Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_1Hint2 = new JButton("힌트  2");
+		Game1_1Hint2.setBounds(520, 252, 97, 23);
+		Game1_1.add(Game1_1Hint2);
+		
+		Game1_1Hint2.addActionListener(new ActionListener() { // 게임 1-2. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "롯데", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Score -= 5;
+				Game1Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_1Hint3 = new JButton("힌트 3");
+		Game1_1Hint3.setBounds(520, 308, 97, 23);
+		Game1_1.add(Game1_1Hint3);
+		
+		Game1_1Hint3.addActionListener(new ActionListener() { // 게임 1-3. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "초콜릿", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Score -= 7;
+				Game1Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JLabel Game1_1Hint = new JLabel("★  Hint ★");
+		Game1_1Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game1_1Hint.setBounds(533, 138, 70, 39);
+		Game1_1.add(Game1_1Hint);
+		
+		Game1_2.setVisible(false);
 		
 		StartBackBtn3.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
 
@@ -246,31 +279,31 @@ public class ChoSung_Game extends JFrame {
 		JLabel StepGame2 = new JLabel("문제 2");
 		StepGame2.setBounds(38, 33, 90, 39);
 		StepGame2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
-		Game2.add(StepGame2);
+		Game1_2.add(StepGame2);
 		
 		JLabel Game2Quiz = new JLabel("ㅅㅅ");
 		Game2Quiz.setBounds(185, 159, 81, 87);
 		Game2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
-		Game2.add(Game2Quiz);
+		Game1_2.add(Game2Quiz);
 		
 		JLabel Game2Score = new JLabel("현재 점수 : 0");
 		Game2Score.setBounds(504, 37, 168, 39);
 		Game2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
-		Game2.add(Game2Score);
+		Game1_2.add(Game2Score);
 		
 		Game2AnsBlank = new JTextField();
 		Game2AnsBlank.setText("이곳에 정답을 입력하세요");
 		Game2AnsBlank.setBounds(153, 352, 147, 39);
-		Game2.add(Game2AnsBlank);
+		Game1_2.add(Game2AnsBlank);
 		Game2AnsBlank.setColumns(10);
 		
 		JButton Game2AnsBtn = new JButton("제출하기");
 		Game2AnsBtn.setBounds(340, 352, 121, 39);
-		Game2.add(Game2AnsBtn);
+		Game1_2.add(Game2AnsBtn);
 		
 		JButton StartBackBtn4 = new JButton("시작 화면으로");
 		StartBackBtn4.setBounds(482, 404, 110, 23);
-		Game2.add(StartBackBtn4);
+		Game1_2.add(StartBackBtn4);
 		
 		StartBackBtn4.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
 
@@ -289,8 +322,8 @@ public class ChoSung_Game extends JFrame {
 				String Answer = "가나";
 				if(Answer.equals(Game1AnsBlank.getText())) {
 					Score += 10;
-					Game1.setVisible(false);
-					Game2.setVisible(true);
+					Game1_1.setVisible(false);
+					Game1_2.setVisible(true);
 					Game2Score.setText("현재 점수 : " + Score);
 				}
 				else {
@@ -298,6 +331,28 @@ public class ChoSung_Game extends JFrame {
 					Game1Score.setText("현재 점수 : " + Score);
 				}
 				
+				
+			}
+			
+		});
+		
+		StartBackBtn2.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				SelectTemaPage.setVisible(false);
+				GamePage.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		Tema1_BrandBtn.addActionListener(new ActionListener() { // 테마 선택 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				SelectTemaPage.setVisible(false);
+				GamePage.setVisible(true);
 				
 			}
 			
