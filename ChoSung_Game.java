@@ -123,15 +123,15 @@ public class ChoSung_Game extends JFrame {
 		GameExp1_1.setBounds(35, 149, 557, 21);
 		GameExpPage.add(GameExp1_1);
 		
-		JLabel GameExp2 = new JLabel("-게임 룰 설명");
+		JLabel GameExp2 = new JLabel("-게임 방법 및 룰 설명");
 		GameExp2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 16));
-		GameExp2.setBounds(35, 203, 110, 21);
+		GameExp2.setBounds(35, 203, 163, 21);
 		GameExpPage.add(GameExp2);
 		
-		JLabel GameExp2_1 = new JLabel("(미정)");
+		JLabel GameExp2_1 = new JLabel("<html>게임 방법 : 문제에 주어진 초성을 보고 개발자가 지정해 놓은 정답을 맞추면 됩니다.<br>" + "(힌트를 사용하면 문제를 쉽게 맞출 수 있습니다.)<br>" + " <br>" + " 게임 룰 : 문제를 맞춘 경우 +10점, 틀린 경우 -5점, 힌트 1 사용시 -3점, 힌트 2 사용시 -5점, 힌트 3 사용시 -7점<html>");
 		GameExp2_1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 14));
 		GameExp2_1.setForeground(Color.DARK_GRAY);
-		GameExp2_1.setBounds(35, 234, 57, 15);
+		GameExp2_1.setBounds(35, 212, 615, 143);
 		GameExpPage.add(GameExp2_1);
 		
 		JButton StartBackBtn1 = new JButton("시작 화면으로");
