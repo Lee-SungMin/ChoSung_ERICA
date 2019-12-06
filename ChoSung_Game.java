@@ -25,6 +25,7 @@ public class ChoSung_Game extends JFrame {
 	private JTextField Game1_1AnsBlank;
 	private JTextField Game1_2AnsBlank;
 	private JTextField Game2_1AnsBlank;
+	private JTextField Game1_3AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -298,7 +299,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1_2.add(Game1_2Quiz);
 		
-		JLabel Game1_2Score = new JLabel("현재 점수 : 0");
+		JLabel Game1_2Score = new JLabel("현재 점수 : " + Score);
 		Game1_2Score.setBounds(307, 37, 168, 39);
 		Game1_2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_2.add(Game1_2Score);
@@ -370,6 +371,96 @@ public class ChoSung_Game extends JFrame {
 		StartBackBtn1_2.setBounds(501, 44, 116, 31);
 		Game1_2.add(StartBackBtn1_2);
 		
+		//문제 1_3
+		
+		JPanel Game1_3 = new JPanel();
+		Game1_3.setBounds(0, 0, 684, 461);
+		GameTema1_Brand.add(Game1_3);
+		
+		Game1_3.setVisible(false);
+		Game1_3.setLayout(null);
+		
+		JLabel StepGame1_3 = new JLabel("문제 3");
+		StepGame1_3.setBounds(38, 33, 90, 39);
+		StepGame1_3.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		Game1_3.add(StepGame1_3);
+		
+		JLabel Game1_3Quiz = new JLabel("ㄴㅅ");
+		Game1_3Quiz.setBounds(185, 159, 81, 87);
+		Game1_3Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game1_3.add(Game1_3Quiz);
+		
+		JLabel Game1_3Score = new JLabel("현재 점수 : " + Score);
+		Game1_3Score.setBounds(307, 37, 168, 39);
+		Game1_3Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game1_3.add(Game1_3Score);
+		
+		Game1_3AnsBlank = new JTextField("이곳에 정답을 입력하세요");
+		Game1_3AnsBlank.setBounds(153, 352, 147, 39);
+		Game1_3.add(Game1_3AnsBlank);
+		Game1_3AnsBlank.setColumns(10);
+		
+		JButton Game1_3AnsBtn = new JButton("제출하기");
+		Game1_3AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_3.add(Game1_3AnsBtn);
+		
+		JButton Game1_3Hint1 = new JButton("힌트 1");
+		Game1_3Hint1.setBounds(520, 201, 97, 23);
+		Game1_3.add(Game1_3Hint1);
+		
+		Game1_3Hint1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) { // 게임 1-3. 힌트 1 버튼 활성화
+				
+				JOptionPane.showMessageDialog(null, "돈", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Score -= 3;
+				Game1_3Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_3Hint2 = new JButton("힌트 2");
+		Game1_3Hint2.setBounds(520, 252, 97, 23);
+		Game1_3.add(Game1_3Hint2);
+		
+		Game1_3Hint2.addActionListener(new ActionListener() { // 게임 1-3. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "게임", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Score -= 5;
+				Game1_3Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_3Hint3 = new JButton("힌트 3");
+		Game1_3Hint3.setBounds(520, 308, 97, 23);
+		Game1_3.add(Game1_3Hint3);
+		
+		Game1_3Hint3.addActionListener(new ActionListener() { // 게임 1-3. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "메이플스토리는 뭐다? (돈슨이다..) ", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Score -= 7;
+				Game1_2Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JLabel Game1_3Hint = new JLabel("★ Hint ★");
+		Game1_3Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game1_3Hint.setBounds(533, 138, 70, 39);
+		Game1_3.add(Game1_3Hint);
+		
+		JButton StartBackBtn1_3 = new JButton("시작 화면으로");
+		StartBackBtn1_3.setBounds(501, 44, 116, 31);
+		Game1_3.add(StartBackBtn1_3);
+		
 		StartBackBtn1_2.addActionListener(new ActionListener() { // 문제 1-2 에서 시작 화면으로 돌아가는 버튼 활성화
 
 			@Override
@@ -379,6 +470,18 @@ public class ChoSung_Game extends JFrame {
 			}
 			
 		});
+		
+		StartBackBtn1_3.addActionListener(new ActionListener() { // 문제 1-3 에서 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema1_Brand.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		
 		
 		
 		// 테마 - 음식
@@ -506,6 +609,44 @@ public class ChoSung_Game extends JFrame {
 			
 		});
 		
+		Game1_2AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_2 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "삼성";
+				if(Answer.equals(Game1_2AnsBlank.getText())) {
+					Score += 10;
+					Game1_2.setVisible(false);
+					Game1_3.setVisible(true);
+					Game1_3Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game1_2Score.setText("현재 점수 : " + Score);
+				}
+			}
+			
+		});
+		
+		Game1_3AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_3 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "넥슨";
+				if(Answer.equals(Game1_2AnsBlank.getText())) {
+					Score += 10;
+					Game1_3.setVisible(false);
+					//Game1_4.setVisible(true);
+					//Game1_4Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game1_3Score.setText("현재 점수 : " + Score);
+				}
+			}
+			
+		});
+		
 		Game2_1AnsBtn.addActionListener(new ActionListener() { // 음식 테마 - 문제 2_1 정답 확인
 
 			@Override
@@ -559,6 +700,7 @@ public class ChoSung_Game extends JFrame {
 			}
 			
 		});
+		
 		
 		
 	}
