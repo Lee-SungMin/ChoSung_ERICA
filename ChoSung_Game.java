@@ -561,6 +561,5 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		
-		
 	}
 }
