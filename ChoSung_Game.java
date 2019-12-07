@@ -26,6 +26,7 @@ public class ChoSung_Game extends JFrame {
 	private JTextField Game1_2AnsBlank;
 	private JTextField Game2_1AnsBlank;
 	private JTextField Game1_3AnsBlank;
+	private JTextField Game1_4AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -447,7 +448,7 @@ public class ChoSung_Game extends JFrame {
 				
 				JOptionPane.showMessageDialog(null, "메이플스토리는 뭐다? (돈슨이다..) ", "힌트 3", JOptionPane.PLAIN_MESSAGE);
 				Score -= 7;
-				Game1_2Score.setText("현재 점수 : " + Score);
+				Game1_3Score.setText("현재 점수 : " + Score);
 			}
 			
 		});
@@ -460,6 +461,96 @@ public class ChoSung_Game extends JFrame {
 		JButton StartBackBtn1_3 = new JButton("시작 화면으로");
 		StartBackBtn1_3.setBounds(501, 44, 116, 31);
 		Game1_3.add(StartBackBtn1_3);
+		
+		// 문제 1_4
+		
+		JPanel Game1_4 = new JPanel();
+		Game1_4.setBounds(0, 0, 684, 461);
+		GameTema1_Brand.add(Game1_4);
+		Game1_4.setVisible(false);
+		Game1_4.setLayout(null);
+		
+		JLabel StepGame1_4 = new JLabel("문제 4");
+		StepGame1_4.setBounds(38, 33, 90, 39);
+		StepGame1_4.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		Game1_4.add(StepGame1_4);
+		
+		
+		JLabel Game1_4Quiz = new JLabel("ㅅㄴ");
+		Game1_4Quiz.setBounds(185, 159, 81, 87);
+		Game1_4Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game1_4.add(Game1_4Quiz);
+		
+		JLabel Game1_4Score = new JLabel("현재 점수 : " + Score);
+		Game1_4Score.setBounds(307, 37, 168, 39);
+		Game1_4Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game1_4.add(Game1_4Score);
+		
+		Game1_4AnsBlank = new JTextField();
+		Game1_4AnsBlank.setBounds(153, 352, 147, 39);
+		Game1_4.add(Game1_4AnsBlank);
+		Game1_4AnsBlank.setColumns(10);
+		
+		JButton Game1_4AnsBtn = new JButton("제출하기");
+		Game1_4AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_4.add(Game1_4AnsBtn);
+		
+		JButton Game1_4Hint1 = new JButton("힌트 1");
+		Game1_4Hint1.setBounds(520, 201, 97, 23);
+		Game1_4.add(Game1_4Hint1);
+		
+		Game1_4Hint1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) { // 게임 1-4. 힌트 1 버튼 활성화
+				
+				JOptionPane.showMessageDialog(null, "가브리엘", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Score -= 3;
+				Game1_4Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_4Hint2 = new JButton("힌트 2");
+		Game1_4Hint2.setBounds(520, 252, 97, 23);
+		Game1_4.add(Game1_4Hint2);
+		
+		Game1_4Hint2.addActionListener(new ActionListener() { // 게임 1-4. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "가방", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Score -= 5;
+				Game1_4Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_4Hint3 = new JButton("힌트 3");
+		Game1_4Hint3.setBounds(520, 308, 97, 23);
+		Game1_4.add(Game1_4Hint3);
+		
+		Game1_4Hint3.addActionListener(new ActionListener() { // 게임 1-4. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "명품", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Score -= 7;
+				Game1_4Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JLabel Game1_4Hint = new JLabel(" ★ Hint ★");
+		Game1_4Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game1_4Hint.setBounds(533, 138, 70, 39);
+		Game1_4.add(Game1_4Hint);
+		
+		JButton StartBackBtn1_4 = new JButton("시작 화면으로");
+		StartBackBtn1_4.setBounds(501, 44, 116, 31);
+		Game1_4.add(StartBackBtn1_4);
 		
 		StartBackBtn1_2.addActionListener(new ActionListener() { // 문제 1-2 에서 시작 화면으로 돌아가는 버튼 활성화
 
@@ -481,6 +572,15 @@ public class ChoSung_Game extends JFrame {
 			
 		});
 		
+		StartBackBtn1_4.addActionListener(new ActionListener() { // 문제 1-4 에서 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema1_Brand.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
 		
 		
 		
@@ -633,15 +733,34 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "넥슨";
-				if(Answer.equals(Game1_2AnsBlank.getText())) {
+				if(Answer.equals(Game1_3AnsBlank.getText())) {
 					Score += 10;
 					Game1_3.setVisible(false);
-					//Game1_4.setVisible(true);
-					//Game1_4Score.setText("현재 점수 : " + Score);
+					Game1_4.setVisible(true);
+					Game1_4Score.setText("현재 점수 : " + Score);
 				}
 				else {
 					Score -= 5;
 					Game1_3Score.setText("현재 점수 : " + Score);
+				}
+			}
+			
+		});
+		
+		Game1_4AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_4 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "샤넬";
+				if(Answer.equals(Game1_2AnsBlank.getText())) {
+					Score += 10;
+					Game1_4.setVisible(false);
+					//Game1_5.setVisible(true);
+					//Game1_5Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game1_4Score.setText("현재 점수 : " + Score);
 				}
 			}
 			
