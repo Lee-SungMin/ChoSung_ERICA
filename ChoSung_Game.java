@@ -27,6 +27,7 @@ public class ChoSung_Game extends JFrame {
 	private JTextField Game2_1AnsBlank;
 	private JTextField Game1_3AnsBlank;
 	private JTextField Game1_4AnsBlank;
+	private JTextField Game1_5AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -552,6 +553,111 @@ public class ChoSung_Game extends JFrame {
 		StartBackBtn1_4.setBounds(501, 44, 116, 31);
 		Game1_4.add(StartBackBtn1_4);
 		
+		// 문제 1_5
+		
+		JPanel Game1_5 = new JPanel();
+		Game1_5.setBounds(0, 0, 672, 451);
+		GameTema1_Brand.add(Game1_5);
+		Game1_5.setVisible(false);
+		Game1_5.setLayout(null);
+		
+		JLabel StepGame1_5 = new JLabel("문제 5");
+		StepGame1_5.setBounds(38, 33, 90, 39);
+		StepGame1_5.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		Game1_5.add(StepGame1_5);
+		
+		JLabel Game1_5Quiz = new JLabel("ㄱㅇ");
+		Game1_5Quiz.setBounds(185, 159, 81, 87);
+		Game1_5Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game1_5.add(Game1_5Quiz);
+		
+		JLabel Game1_5Score = new JLabel("현재 점수 : " + Score);
+		Game1_5Score.setBounds(307, 37, 168, 39);
+		Game1_5Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game1_5.add(Game1_5Score);
+		
+		Game1_5AnsBlank = new JTextField();
+		Game1_5AnsBlank.setBounds(153, 352, 147, 39);
+		Game1_5.add(Game1_5AnsBlank);
+		Game1_5AnsBlank.setColumns(10);
+		
+		JButton Game1_5AnsBtn = new JButton("제출하기");
+		Game1_5AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_5.add(Game1_5AnsBtn);
+		
+		JButton Game1_5Hint1 = new JButton("힌트 1");
+		Game1_5Hint1.setBounds(520, 201, 97, 23);
+		Game1_5.add(Game1_5Hint1);
+		
+		Game1_5Hint1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) { // 게임 1-5. 힌트 1 버튼 활성화
+				
+				JOptionPane.showMessageDialog(null, "영어 스펠링 3개", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Score -= 3;
+				Game1_5Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_5Hint2 = new JButton("힌트 2");
+		Game1_5Hint2.setBounds(520, 252, 97, 23);
+		Game1_5.add(Game1_5Hint2);
+		
+		Game1_5Hint2.addActionListener(new ActionListener() { // 게임 1-5. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "국산", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Score -= 5;
+				Game1_5Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game1_5Hint3 = new JButton("힌트 3");
+		Game1_5Hint3.setBounds(520, 308, 97, 23);
+		Game1_5.add(Game1_5Hint3);
+		
+		Game1_5Hint3.addActionListener(new ActionListener() { // 게임 1-5. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "자동차", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Score -= 7;
+				Game1_5Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JLabel Game1_5Hint = new JLabel("★ Hint ★");
+		Game1_5Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game1_5Hint.setBounds(533, 138, 70, 39);
+		Game1_5.add(Game1_5Hint);
+		
+		JButton StartBackBtn1_5 = new JButton("시작 화면으로");
+		StartBackBtn1_5.setBounds(501, 44, 116, 31);
+		Game1_5.add(StartBackBtn1_5);
+		
+		// 테마 1_브랜드 끝
+		
+		JPanel Game1_End = new JPanel();
+		Game1_End.setBounds(0, 0, 684, 461);
+		GameTema1_Brand.add(Game1_End);
+		Game1_End.setLayout(null);
+		
+		JLabel Game1_EndLabel = new JLabel("브랜드 테마 클리어 !");
+		Game1_EndLabel.setBounds(150, 127, 392, 78);
+		Game1_EndLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
+		Game1_End.add(Game1_EndLabel);
+		
+		JButton StartBackBtn1_End = new JButton("시작 화면으로");
+		StartBackBtn1_End.setBounds(501, 44, 116, 31);
+		Game1_End.add(StartBackBtn1_End);
+		
 		StartBackBtn1_2.addActionListener(new ActionListener() { // 문제 1-2 에서 시작 화면으로 돌아가는 버튼 활성화
 
 			@Override
@@ -581,6 +687,27 @@ public class ChoSung_Game extends JFrame {
 			}
 			
 		});
+		
+		StartBackBtn1_5.addActionListener(new ActionListener() { // 문제 1-5 에서 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema1_Brand.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		StartBackBtn1_End.addActionListener(new ActionListener() { // 문제 1-End 에서 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema1_Brand.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
 		
 		
 		
@@ -752,11 +879,11 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "샤넬";
-				if(Answer.equals(Game1_2AnsBlank.getText())) {
+				if(Answer.equals(Game1_4AnsBlank.getText())) {
 					Score += 10;
 					Game1_4.setVisible(false);
-					//Game1_5.setVisible(true);
-					//Game1_5Score.setText("현재 점수 : " + Score);
+					Game1_5.setVisible(true);
+					Game1_5Score.setText("현재 점수 : " + Score);
 				}
 				else {
 					Score -= 5;
@@ -765,6 +892,26 @@ public class ChoSung_Game extends JFrame {
 			}
 			
 		});
+		
+		Game1_5AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_5 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "기아";
+				if(Answer.equals(Game1_5AnsBlank.getText())) {
+					Score += 10;
+					Game1_5.setVisible(false);
+					Game1_End.setVisible(true);
+					
+				}
+				else {
+					Score -= 5;
+				}
+			}
+			
+		});
+		
+		
 		
 		Game2_1AnsBtn.addActionListener(new ActionListener() { // 음식 테마 - 문제 2_1 정답 확인
 
