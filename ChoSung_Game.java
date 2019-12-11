@@ -11,6 +11,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -60,7 +61,6 @@ public class ChoSung_Game extends JFrame {
 		JPanel StartPage = new JPanel();
 		StartPage.setBounds(0, 0, 684, 461);
 		MainPage.add(StartPage);
-		StartPage.setLayout(null);
 		
 		JPanel SelectTemaPage = new JPanel();
 		SelectTemaPage.setBounds(0, 0, 684, 461);
@@ -75,9 +75,10 @@ public class ChoSung_Game extends JFrame {
 		GameExpPage.setLayout(null);
 		
 		GameExpPage.setVisible(false);
+		StartPage.setLayout(null);
 		
 		JLabel StartLabel = new JLabel("초성 퀴즈 게임");
-		StartLabel.setBounds(192, 127, 276, 78);
+		StartLabel.setBounds(203, 127, 276, 78);
 		StartLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
 		StartPage.add(StartLabel);
 		
@@ -88,6 +89,11 @@ public class ChoSung_Game extends JFrame {
 		JButton GameExpBtn = new JButton("게임 설명");
 		GameExpBtn.setBounds(345, 346, 97, 23);
 		StartPage.add(GameExpBtn);
+		
+		ImageIcon image = new ImageIcon("ChoSung_BackGreound.jpg"); // 게임 시작 이미지
+		JLabel BackGround = new JLabel(new ImageIcon("C:\\Users\\Sung Min Lee\\eclipse-workspace\\ChoSungGame\\image\\ChoSung_BackGround.jpg"));
+		BackGround.setBounds(0, 0, 684, 461);
+		StartPage.add(BackGround);
 		
 		StartBtn.addActionListener(new ActionListener() { // 게임 시작 버튼 활성화
 
@@ -556,7 +562,7 @@ public class ChoSung_Game extends JFrame {
 		// 문제 1_5
 		
 		JPanel Game1_5 = new JPanel();
-		Game1_5.setBounds(0, 0, 672, 451);
+		Game1_5.setBounds(0, 0, 684, 461);
 		GameTema1_Brand.add(Game1_5);
 		Game1_5.setVisible(false);
 		Game1_5.setLayout(null);
