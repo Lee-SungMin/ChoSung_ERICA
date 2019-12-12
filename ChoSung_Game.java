@@ -29,6 +29,7 @@ public class ChoSung_Game extends JFrame {
 	private JTextField Game1_3AnsBlank;
 	private JTextField Game1_4AnsBlank;
 	private JTextField Game1_5AnsBlank;
+	private JTextField Game2_2AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -724,11 +725,6 @@ public class ChoSung_Game extends JFrame {
 		GameTema2_Food.add(Game2_1);
 		Game2_1.setLayout(null);
 		
-		JPanel Game2_2 = new JPanel();
-		Game2_2.setBounds(0, 0, 684, 461);
-		GameTema2_Food.add(Game2_1);
-		Game2_2.setLayout(null);
-		
 		JLabel StepGame2_1 = new JLabel("문제 1");
 		StepGame2_1.setBounds(38, 33, 90, 39);
 		StepGame2_1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
@@ -815,10 +811,108 @@ public class ChoSung_Game extends JFrame {
 		Game2_1AnsBtn.setBounds(340, 352, 121, 39);
 		Game2_1.add(Game2_1AnsBtn);
 		
-		Game2_1AnsBlank = new JTextField("이곳에 정답을 입력하세요");
+		Game2_1AnsBlank = new JTextField("");
 		Game2_1AnsBlank.setBounds(153, 352, 147, 39);
 		Game2_1.add(Game2_1AnsBlank);
 		Game2_1AnsBlank.setColumns(10);
+		
+		// 문제 2_2
+		
+		JPanel Game2_2 = new JPanel();
+		Game2_2.setBounds(0, 0, 684, 461);
+		GameTema2_Food.add(Game2_2);
+		Game2_2.setLayout(null);
+		
+		JLabel StepGame2_2 = new JLabel("문제 2");
+		StepGame2_2.setBounds(38, 33, 90, 39);
+		StepGame2_2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		Game2_2.add(StepGame2_2);
+		
+		JLabel Game2_2Quiz = new JLabel("ㅁㅅ");
+		Game2_2Quiz.setBounds(185, 159, 81, 87);
+		Game2_2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game2_2.add(Game2_2Quiz);
+		
+		JLabel Game2_2Score = new JLabel("현재 점수 : " + Score);
+		Game2_2Score.setBounds(307, 37, 168, 39);
+		Game2_2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game2_2.add(Game2_2Score);
+		
+		JLabel Game2_2Hint = new JLabel("★ Hint ★");
+		Game2_2Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game2_2Hint.setBounds(533, 138, 70, 39);
+		Game2_2.add(Game2_2Hint);
+		
+		JButton Game2_2Hint1 = new JButton("힌트 1");
+		Game2_2Hint1.setBounds(520, 201, 97, 23);
+		Game2_2.add(Game2_2Hint1);
+		
+		Game2_2Hint1.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) { // 게임 2-2. 힌트 1 버튼 활성화
+				
+				JOptionPane.showMessageDialog(null, "나무", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Score -= 3;
+				Game2_2Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game2_2Hint2 = new JButton("힌트 2");
+		Game2_2Hint2.setBounds(520, 252, 97, 23);
+		Game2_2.add(Game2_2Hint2);
+		
+		Game2_2Hint2.addActionListener(new ActionListener() { // 게임 2-2. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "초록색", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Score -= 5;
+				Game2_2Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton Game2_2Hint3 = new JButton("힌트 3");
+		Game2_2Hint3.setBounds(520, 308, 97, 23);
+		Game2_2.add(Game2_2Hint3);
+		
+		Game2_2Hint3.addActionListener(new ActionListener() { // 게임 2-2. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "널 깨물어 주고 싶엉 >_<♥", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Score -= 7;
+				Game2_2Score.setText("현재 점수 : " + Score);
+			}
+			
+		});
+		
+		JButton StartBackBtn2_2 = new JButton("시작 화면으로");
+		StartBackBtn2_2.setBounds(501, 44, 116, 31);
+		Game2_2.add(StartBackBtn2_2);
+		
+		StartBackBtn2_2.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema2_Food.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		JButton Game2_2AnsBtn = new JButton("제출 하기");
+		Game2_2AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_2.add(Game2_2AnsBtn);
+		
+		Game2_2AnsBlank = new JTextField();
+		Game2_2AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_2.add(Game2_2AnsBlank);
+		Game2_2AnsBlank.setColumns(10);
 		
 		
 		Game1_1AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_1 정답 확인
@@ -928,7 +1022,7 @@ public class ChoSung_Game extends JFrame {
 					Score += 10;
 					Game2_1.setVisible(false);
 					Game2_2.setVisible(true);
-					//Game2_2Score.setText("현재 점수 : " + Score);
+					Game2_2Score.setText("현재 점수 : " + Score);
 				}
 				else {
 					Score -= 5;
@@ -939,6 +1033,29 @@ public class ChoSung_Game extends JFrame {
 			}
 			
 		});
+		
+		Game2_2AnsBtn.addActionListener(new ActionListener() { // 음식 테마 - 문제 2_2 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "매실";
+				if(Answer.equals(Game2_2AnsBlank.getText())) {
+					Score += 10;
+					Game2_2.setVisible(false);
+					//Game2_3.setVisible(true);
+					//Game2_3Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game2_2Score.setText("현재 점수 : " + Score);
+				}
+				
+				
+			}
+			
+		});
+		
+		
 		
 		StartBackTemaBtn.addActionListener(new ActionListener() { // 테마 페이지에서 시작 화면으로 돌아가는 버튼 활성화
 
