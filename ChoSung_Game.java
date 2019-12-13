@@ -92,7 +92,7 @@ public class ChoSung_Game extends JFrame {
 		StartPage.add(GameExpBtn);
 		
 		ImageIcon image = new ImageIcon("ChoSung_BackGreound.jpg"); // 게임 시작 이미지
-		JLabel BackGround = new JLabel(new ImageIcon("C:\\Users\\Sung Min Lee\\eclipse-workspace\\ChoSungGame\\image\\ChoSung_BackGround.jpg"));
+		JLabel BackGround = new JLabel(new ImageIcon("C:\\Users\\Sung Min Lee\\eclipse-workspace\\ChoSungGame\\image\\ChoSungGif3.gif"));
 		BackGround.setBounds(0, 0, 684, 461);
 		StartPage.add(BackGround);
 		
