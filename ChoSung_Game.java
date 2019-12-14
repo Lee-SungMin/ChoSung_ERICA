@@ -30,6 +30,7 @@ public class ChoSung_Game extends JFrame {
 	private JTextField Game1_4AnsBlank;
 	private JTextField Game1_5AnsBlank;
 	private JTextField Game2_2AnsBlank;
+	private JTextField Game2_3AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -913,6 +914,58 @@ public class ChoSung_Game extends JFrame {
 		Game2_2AnsBlank.setBounds(153, 352, 147, 39);
 		Game2_2.add(Game2_2AnsBlank);
 		Game2_2AnsBlank.setColumns(10);
+		
+		// 문제 2_3
+		
+		JPanel Game2_3 = new JPanel();
+		Game2_3.setLayout(null);
+		Game2_3.setBounds(0, 0, 684, 461);
+		GameTema2_Food.add(Game2_3);
+		
+		JLabel StepGame2_3 = new JLabel("문제 3");
+		StepGame2_3.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame2_3.setBounds(38, 33, 90, 39);
+		Game2_3.add(StepGame2_3);
+		
+		JLabel Game2_3Quiz = new JLabel("ㅂㅅ");
+		Game2_3Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game2_3Quiz.setBounds(185, 159, 81, 87);
+		Game2_3.add(Game2_3Quiz);
+		
+		JLabel Game2_3Score = new JLabel("현재 점수 : " + Score);
+		Game2_3Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game2_3Score.setBounds(307, 37, 168, 39);
+		Game2_3.add(Game2_3Score);
+		
+		JLabel Game2_3Hint = new JLabel("★ Hint ★");
+		Game2_3Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game2_3Hint.setBounds(533, 138, 70, 39);
+		Game2_3.add(Game2_3Hint);
+		
+		JButton Game2_3Hint1 = new JButton("힌트 1");
+		Game2_3Hint1.setBounds(520, 201, 97, 23);
+		Game2_3.add(Game2_3Hint1);
+		
+		JButton Game2_3Hint2 = new JButton("힌트 2");
+		Game2_3Hint2.setBounds(520, 252, 97, 23);
+		Game2_3.add(Game2_3Hint2);
+		
+		JButton Game2_3Hint3 = new JButton("힌트 3");
+		Game2_3Hint3.setBounds(520, 308, 97, 23);
+		Game2_3.add(Game2_3Hint3);
+		
+		JButton StartBackBtn2_3 = new JButton("시작 화면으로");
+		StartBackBtn2_3.setBounds(501, 44, 116, 31);
+		Game2_3.add(StartBackBtn2_3);
+		
+		JButton Game2_3AnsBtn = new JButton("제출 하기");
+		Game2_3AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_3.add(Game2_3AnsBtn);
+		
+		Game2_3AnsBlank = new JTextField();
+		Game2_3AnsBlank.setColumns(10);
+		Game2_3AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_3.add(Game2_3AnsBlank);
 		
 		
 		Game1_1AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_1 정답 확인
