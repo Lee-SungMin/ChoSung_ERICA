@@ -31,6 +31,8 @@ public class ChoSung_Game extends JFrame {
 	private JTextField Game1_5AnsBlank;
 	private JTextField Game2_2AnsBlank;
 	private JTextField Game2_3AnsBlank;
+	private JTextField Game2_4AnsBlank;
+	private JTextField Game2_5AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -966,6 +968,110 @@ public class ChoSung_Game extends JFrame {
 		Game2_3AnsBlank.setColumns(10);
 		Game2_3AnsBlank.setBounds(153, 352, 147, 39);
 		Game2_3.add(Game2_3AnsBlank);
+		
+		// 문제 2_4
+		
+		JPanel Game2_4 = new JPanel();
+		Game2_4.setLayout(null);
+		Game2_4.setBounds(0, 0, 684, 461);
+		GameTema2_Food.add(Game2_4);
+		
+		JLabel StepGame2_4 = new JLabel("문제 4");
+		StepGame2_4.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame2_4.setBounds(38, 33, 90, 39);
+		Game2_4.add(StepGame2_4);
+		
+		JLabel Game2_4Quiz = new JLabel("??");
+		Game2_4Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game2_4Quiz.setBounds(185, 159, 81, 87);
+		Game2_4.add(Game2_4Quiz);
+		
+		JLabel Game2_4Score = new JLabel("현재 점수 : " + Score);
+		Game2_4Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game2_4Score.setBounds(307, 37, 168, 39);
+		Game2_4.add(Game2_4Score);
+		
+		JLabel Game2_4Hint = new JLabel("★ Hint ★");
+		Game2_4Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game2_4Hint.setBounds(533, 138, 70, 39);
+		Game2_4.add(Game2_4Hint);
+		
+		JButton Game2_4Hint1 = new JButton("힌트 1");
+		Game2_4Hint1.setBounds(520, 201, 97, 23);
+		Game2_4.add(Game2_4Hint1);
+		
+		JButton Game2_4Hint2 = new JButton("힌트 2");
+		Game2_4Hint2.setBounds(520, 252, 97, 23);
+		Game2_4.add(Game2_4Hint2);
+		
+		JButton Game2_4Hint3 = new JButton("힌트 3");
+		Game2_4Hint3.setBounds(520, 308, 97, 23);
+		Game2_4.add(Game2_4Hint3);
+		
+		JButton StartBackBtn2_4 = new JButton("시작 화면으로");
+		StartBackBtn2_4.setBounds(501, 44, 116, 31);
+		Game2_4.add(StartBackBtn2_4);
+		
+		JButton Game2_4AnsBtn = new JButton("제출 하기");
+		Game2_4AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_4.add(Game2_4AnsBtn);
+		
+		Game2_4AnsBlank = new JTextField();
+		Game2_4AnsBlank.setColumns(10);
+		Game2_4AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_4.add(Game2_4AnsBlank);
+		
+		// 문제 2_5
+		
+		JPanel Game2_5 = new JPanel();
+		Game2_5.setLayout(null);
+		Game2_5.setBounds(0, 0, 684, 461);
+		GameTema2_Food.add(Game2_5);
+		
+		JLabel StepGame2_5 = new JLabel("문제 5");
+		StepGame2_5.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame2_5.setBounds(38, 33, 90, 39);
+		Game2_5.add(StepGame2_5);
+		
+		JLabel Game2_5Quiz = new JLabel("??");
+		Game2_5Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game2_5Quiz.setBounds(185, 159, 81, 87);
+		Game2_5.add(Game2_5Quiz);
+		
+		JLabel Game2_5Score = new JLabel("현재 점수 : " + Score);
+		Game2_5Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game2_5Score.setBounds(307, 37, 168, 39);
+		Game2_5.add(Game2_5Score);
+		
+		JLabel Game2_5Hint = new JLabel("★ Hint ★");
+		Game2_5Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game2_5Hint.setBounds(533, 138, 70, 39);
+		Game2_5.add(Game2_5Hint);
+		
+		JButton Game2_5Hint1 = new JButton("힌트 1");
+		Game2_5Hint1.setBounds(520, 201, 97, 23);
+		Game2_5.add(Game2_5Hint1);
+		
+		JButton Game2_5Hint2 = new JButton("힌트 2");
+		Game2_5Hint2.setBounds(520, 252, 97, 23);
+		Game2_5.add(Game2_5Hint2);
+		
+		JButton Game2_5Hint3 = new JButton("힌트 3");
+		Game2_5Hint3.setBounds(520, 308, 97, 23);
+		Game2_5.add(Game2_5Hint3);
+		
+		JButton StartBackBtn2_5 = new JButton("시작 화면으로");
+		StartBackBtn2_5.setBounds(501, 44, 116, 31);
+		Game2_5.add(StartBackBtn2_5);
+		
+		JButton Game2_5AnsBtn = new JButton("제출 하기");
+		Game2_5AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_5.add(Game2_5AnsBtn);
+		
+		Game2_5AnsBlank = new JTextField();
+		Game2_5AnsBlank.setColumns(10);
+		Game2_5AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_5.add(Game2_5AnsBlank);
 		
 		
 		Game1_1AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_1 정답 확인
