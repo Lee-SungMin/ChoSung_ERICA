@@ -33,6 +33,11 @@ public class ChoSung_Game extends JFrame {
 	private JTextField Game2_3AnsBlank;
 	private JTextField Game2_4AnsBlank;
 	private JTextField Game2_5AnsBlank;
+	private JTextField Game3_1AnsBlank;
+	private JTextField Game3_2AnsBlank;
+	private JTextField Game3_3AnsBlank;
+	private JTextField Game3_4AnsBlank;
+	private JTextField Game3_5AnsBlank;
 
 	/**
 	 * Launch the application.
@@ -173,8 +178,12 @@ public class ChoSung_Game extends JFrame {
 		SelectTemaPage.add(Tema1_BrandBtn);
 		
 		JButton Tema2_FoodBtn = new JButton("음식");
-		Tema2_FoodBtn.setBounds(294, 180, 97, 23);
+		Tema2_FoodBtn.setBounds(294, 187, 97, 23);
 		SelectTemaPage.add(Tema2_FoodBtn);
+		
+		JButton Tema3_AnimalBtn = new JButton("동물");
+		Tema3_AnimalBtn.setBounds(294, 247, 97, 23);
+		SelectTemaPage.add(Tema3_AnimalBtn);
 		
 		JButton StartBackTemaBtn = new JButton("시작 화면으로");
 		StartBackTemaBtn.setBounds(482, 404, 110, 23);
@@ -194,8 +203,9 @@ public class ChoSung_Game extends JFrame {
 		GameTema2_Food.setLayout(null);
 		
 		GameTema2_Food.setVisible(false);
-	
 		
+		// 문제 1_1
+	
 		JPanel Game1_1 = new JPanel();
 		Game1_1.setBounds(0, 0, 684, 461);
 		GameTema1_Brand.add(Game1_1);
@@ -1227,6 +1237,337 @@ public class ChoSung_Game extends JFrame {
 		StartBackBtn2_End.setBounds(501, 44, 116, 31);
 		Game2_End.add(StartBackBtn2_End);
 		
+		JPanel GameTema3_Animal = new JPanel();
+		GameTema3_Animal.setBounds(0, 0, 684, 461);
+		MainPage.add(GameTema3_Animal);
+		GameTema3_Animal.setLayout(null);
+		
+		// 문제 3_1
+		
+		JPanel Game3_1 = new JPanel();
+		Game3_1.setLayout(null);
+		Game3_1.setBounds(0, 0, 684, 461);
+		GameTema3_Animal.add(Game3_1);
+		
+		JLabel StepGame3_1 = new JLabel("문제 1");
+		StepGame3_1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame3_1.setBounds(38, 33, 90, 39);
+		Game3_1.add(StepGame3_1);
+		
+		JLabel Game3_1Quiz = new JLabel("??");
+		Game3_1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game3_1Quiz.setBounds(185, 159, 150, 87);
+		Game3_1.add(Game3_1Quiz);
+		
+		JLabel Game3_1Score = new JLabel("현재 점수 " + Score);
+		Game3_1Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game3_1Score.setBounds(307, 37, 168, 39);
+		Game3_1.add(Game3_1Score);
+		
+		JLabel Game3_1Hint = new JLabel("★ Hint ★");
+		Game3_1Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game3_1Hint.setBounds(533, 138, 70, 39);
+		Game3_1.add(Game3_1Hint);
+		
+		JButton Game3_1Hint1 = new JButton("힌트 1");
+		Game3_1Hint1.setBounds(520, 201, 97, 23);
+		Game3_1.add(Game3_1Hint1);
+		
+		JButton Game3_1Hint2 = new JButton("힌트 2");
+		Game3_1Hint2.setBounds(520, 252, 97, 23);
+		Game3_1.add(Game3_1Hint2);
+		
+		JButton Game3_1Hint3 = new JButton("힌트 3");
+		Game3_1Hint3.setBounds(520, 308, 97, 23);
+		Game3_1.add(Game3_1Hint3);
+		
+		JButton StartBackBtn3_1 = new JButton("시작 화면으로");
+		StartBackBtn3_1.setBounds(501, 44, 116, 31);
+		Game3_1.add(StartBackBtn3_1);
+		
+		StartBackBtn3_1.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema3_Animal.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		JButton Game3_1AnsBtn = new JButton("제출 하기");
+		Game3_1AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_1.add(Game3_1AnsBtn);
+		
+		Game3_1AnsBlank = new JTextField("");
+		Game3_1AnsBlank.setColumns(10);
+		Game3_1AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_1.add(Game3_1AnsBlank);
+		
+		// 문제 3_2
+		
+		JPanel Game3_2 = new JPanel();
+		Game3_2.setLayout(null);
+		Game3_2.setBounds(0, 0, 684, 461);
+		GameTema3_Animal.add(Game3_2);
+		
+		JLabel StepGame3_2 = new JLabel("문제 2");
+		StepGame3_2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame3_2.setBounds(38, 33, 90, 39);
+		Game3_2.add(StepGame3_2);
+		
+		JLabel Game3_2Quiz = new JLabel("??");
+		Game3_2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game3_2Quiz.setBounds(185, 159, 150, 87);
+		Game3_2.add(Game3_2Quiz);
+		
+		JLabel Game3_2Score = new JLabel("현재 점수 : " + Score);
+		Game3_2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game3_2Score.setBounds(307, 37, 168, 39);
+		Game3_2.add(Game3_2Score);
+		
+		JLabel Game3_2Hint = new JLabel("★ Hint ★");
+		Game3_2Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game3_2Hint.setBounds(533, 138, 70, 39);
+		Game3_2.add(Game3_2Hint);
+		
+		JButton Game3_2Hint1 = new JButton("힌트 1");
+		Game3_2Hint1.setBounds(520, 201, 97, 23);
+		Game3_2.add(Game3_2Hint1);
+		
+		JButton Game3_2Hint2 = new JButton("힌트 2");
+		Game3_2Hint2.setBounds(520, 252, 97, 23);
+		Game3_2.add(Game3_2Hint2);
+		
+		JButton Game3_2Hint3 = new JButton("힌트 3");
+		Game3_2Hint3.setBounds(520, 308, 97, 23);
+		Game3_2.add(Game3_2Hint3);
+		
+		JButton StartBackBtn3_2 = new JButton("시작 화면으로");
+		StartBackBtn3_2.setBounds(501, 44, 116, 31);
+		Game3_2.add(StartBackBtn3_2);
+		
+		StartBackBtn3_2.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema3_Animal.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		JButton Game3_2AnsBtn = new JButton("제출 하기");
+		Game3_2AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_2.add(Game3_2AnsBtn);
+		
+		Game3_2AnsBlank = new JTextField("");
+		Game3_2AnsBlank.setColumns(10);
+		Game3_2AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_2.add(Game3_2AnsBlank);
+		
+		// 문제 3_3
+		
+		JPanel Game3_3 = new JPanel();
+		Game3_3.setLayout(null);
+		Game3_3.setBounds(0, 0, 684, 461);
+		GameTema3_Animal.add(Game3_3);
+		
+		JLabel StepGame3_3 = new JLabel("문제 3");
+		StepGame3_3.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame3_3.setBounds(38, 33, 90, 39);
+		Game3_3.add(StepGame3_3);
+		
+		JLabel Game3_3Quiz = new JLabel("??");
+		Game3_3Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game3_3Quiz.setBounds(185, 159, 81, 87);
+		Game3_3.add(Game3_3Quiz);
+		
+		JLabel Game3_3Score = new JLabel("현재 점수 : " + Score);
+		Game3_3Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game3_3Score.setBounds(307, 37, 168, 39);
+		Game3_3.add(Game3_3Score);
+		
+		JLabel Game3_3Hint = new JLabel("★ Hint ★");
+		Game3_3Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game3_3Hint.setBounds(533, 138, 70, 39);
+		Game3_3.add(Game3_3Hint);
+		
+		JButton Game3_3Hint1 = new JButton("힌트 1");
+		Game3_3Hint1.setBounds(520, 201, 97, 23);
+		Game3_3.add(Game3_3Hint1);
+		
+		JButton Game3_3Hint2 = new JButton("힌트 2");
+		Game3_3Hint2.setBounds(520, 252, 97, 23);
+		Game3_3.add(Game3_3Hint2);
+		
+		JButton Game3_3Hint3 = new JButton("힌트 3");
+		Game3_3Hint3.setBounds(520, 308, 97, 23);
+		Game3_3.add(Game3_3Hint3);
+		
+		JButton StartBackBtn3_3 = new JButton("시작 화면으로");
+		StartBackBtn3_3.setBounds(501, 44, 116, 31);
+		Game3_3.add(StartBackBtn3_3);
+		
+		StartBackBtn3_3.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema3_Animal.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		JButton Game3_3AnsBtn = new JButton("제출 하기");
+		Game3_3AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_3.add(Game3_3AnsBtn);
+		
+		Game3_3AnsBlank = new JTextField();
+		Game3_3AnsBlank.setColumns(10);
+		Game3_3AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_3.add(Game3_3AnsBlank);
+		
+		// 문제 3_4
+		
+		JPanel Game3_4 = new JPanel();
+		Game3_4.setLayout(null);
+		Game3_4.setBounds(0, 0, 684, 461);
+		GameTema3_Animal.add(Game3_4);
+		
+		JLabel StepGame3_4 = new JLabel("문제 4");
+		StepGame3_4.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame3_4.setBounds(38, 33, 90, 39);
+		Game3_4.add(StepGame3_4);
+		
+		JLabel Game3_4Quiz = new JLabel("??");
+		Game3_4Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game3_4Quiz.setBounds(185, 159, 81, 87);
+		Game3_4.add(Game3_4Quiz);
+		
+		JLabel Game3_4Score = new JLabel("현재 점수 : " + Score);
+		Game3_4Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game3_4Score.setBounds(307, 37, 168, 39);
+		Game3_4.add(Game3_4Score);
+		
+		JLabel Game3_4Hint = new JLabel("★ Hint ★");
+		Game3_4Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game3_4Hint.setBounds(533, 138, 70, 39);
+		Game3_4.add(Game3_4Hint);
+		
+		JButton Game3_4Hint1 = new JButton("힌트 1");
+		Game3_4Hint1.setBounds(520, 201, 97, 23);
+		Game3_4.add(Game3_4Hint1);
+		
+		JButton Game3_4Hint2 = new JButton("힌트 2");
+		Game3_4Hint2.setBounds(520, 252, 97, 23);
+		Game3_4.add(Game3_4Hint2);
+		
+		JButton Game3_4Hint3 = new JButton("힌트 3");
+		Game3_4Hint3.setBounds(520, 308, 97, 23);
+		Game3_4.add(Game3_4Hint3);
+		
+		JButton StartBackBtn3_4 = new JButton("시작 화면으로");
+		StartBackBtn3_4.setBounds(501, 44, 116, 31);
+		Game3_4.add(StartBackBtn3_4);
+		
+		StartBackBtn3_4.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema3_Animal.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		JButton Game3_4AnsBtn = new JButton("제출 하기");
+		Game3_4AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_4.add(Game3_4AnsBtn);
+		
+		Game3_4AnsBlank = new JTextField();
+		Game3_4AnsBlank.setColumns(10);
+		Game3_4AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_4.add(Game3_4AnsBlank);
+		
+		// 문제 3_5
+		
+		JPanel Game3_5 = new JPanel();
+		Game3_5.setLayout(null);
+		Game3_5.setBounds(0, 0, 684, 461);
+		GameTema3_Animal.add(Game3_5);
+		
+		JLabel StepGame3_5 = new JLabel("문제 5");
+		StepGame3_5.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
+		StepGame3_5.setBounds(38, 33, 90, 39);
+		Game3_5.add(StepGame3_5);
+		
+		JLabel Game3_5Quiz = new JLabel("??");
+		Game3_5Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
+		Game3_5Quiz.setBounds(185, 159, 81, 87);
+		Game3_5.add(Game3_5Quiz);
+		
+		JLabel Game3_5Score = new JLabel("현재 점수 : " + Score);
+		Game3_5Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game3_5Score.setBounds(307, 37, 168, 39);
+		Game3_5.add(Game3_5Score);
+		
+		JLabel Game3_5Hint = new JLabel("★ Hint ★");
+		Game3_5Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
+		Game3_5Hint.setBounds(533, 138, 70, 39);
+		Game3_5.add(Game3_5Hint);
+		
+		JButton Game3_5HInt1 = new JButton("힌트 1");
+		Game3_5HInt1.setBounds(520, 201, 97, 23);
+		Game3_5.add(Game3_5HInt1);
+		
+		JButton Game3_5Hint2 = new JButton("힌트 2");
+		Game3_5Hint2.setBounds(520, 252, 97, 23);
+		Game3_5.add(Game3_5Hint2);
+		
+		JButton Game3_5Hint3 = new JButton("힌트 3");
+		Game3_5Hint3.setBounds(520, 308, 97, 23);
+		Game3_5.add(Game3_5Hint3);
+		
+		JButton StartBackBtn3_5 = new JButton("시작 화면으로");
+		StartBackBtn3_5.setBounds(501, 44, 116, 31);
+		Game3_5.add(StartBackBtn3_5);
+		
+		StartBackBtn3_5.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				GameTema3_Animal.setVisible(false);
+				StartPage.setVisible(true);
+			}
+			
+		});
+		
+		JButton Game3_5AnsBtn = new JButton("제출 하기");
+		Game3_5AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_5.add(Game3_5AnsBtn);
+		
+		Game3_5AnsBlank = new JTextField();
+		Game3_5AnsBlank.setColumns(10);
+		Game3_5AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_5.add(Game3_5AnsBlank);
+		
+		// 테마3_동물 끝
+		
+		JPanel Game3_End = new JPanel();
+		Game3_End.setLayout(null);
+		Game3_End.setBounds(0, 0, 684, 461);
+		GameTema3_Animal.add(Game3_End);
+		
+		JLabel Game3_EndLabel = new JLabel("동물 테마 클리어 !");
+		Game3_EndLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
+		Game3_EndLabel.setBounds(150, 127, 392, 78);
+		Game3_End.add(Game3_EndLabel);
+		
+		JButton StartBackBtn3_End = new JButton("시작 화면으로");
+		StartBackBtn3_End.setBounds(501, 44, 116, 31);
+		Game3_End.add(StartBackBtn3_End);
+		
 		
 		Game1_1AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_1 정답 확인
 
@@ -1319,6 +1660,7 @@ public class ChoSung_Game extends JFrame {
 				}
 				else {
 					Score -= 5;
+					Game1_5Score.setText("현재 점수 : " + Score);
 				}
 			}
 			
@@ -1422,6 +1764,7 @@ public class ChoSung_Game extends JFrame {
 				}
 				else {
 					Score -= 5;
+					Game2_5Score.setText("현재 점수 : " + Score);
 				}
 				
 				
@@ -1429,6 +1772,109 @@ public class ChoSung_Game extends JFrame {
 			
 		});
 		
+		Game3_1AnsBtn.addActionListener(new ActionListener() { // 동물 테마 - 문제 3_1 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "???";
+				if(Answer.equals(Game3_1AnsBlank.getText())) {
+					Score += 10;
+					Game3_1.setVisible(false);
+					Game3_2.setVisible(true);
+					Game3_2Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game3_1Score.setText("현재 점수 : " + Score);
+				}
+				
+				
+			}
+			
+		});
+		
+		Game3_2AnsBtn.addActionListener(new ActionListener() { // 동물 테마 - 문제 3_2 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "???";
+				if(Answer.equals(Game3_2AnsBlank.getText())) {
+					Score += 10;
+					Game3_2.setVisible(false);
+					Game3_3.setVisible(true);
+					Game3_3Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game3_2Score.setText("현재 점수 : " + Score);
+				}
+				
+				
+			}
+			
+		});
+		
+		Game3_3AnsBtn.addActionListener(new ActionListener() { // 동물 테마 - 문제 3_3 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "???";
+				if(Answer.equals(Game3_3AnsBlank.getText())) {
+					Score += 10;
+					Game3_2.setVisible(false);
+					Game3_3.setVisible(true);
+					Game3_3Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game3_3Score.setText("현재 점수 : " + Score);
+				}
+				
+				
+			}
+			
+		});
+		
+		Game3_4AnsBtn.addActionListener(new ActionListener() { // 동물 테마 - 문제 3_4 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "???";
+				if(Answer.equals(Game3_4AnsBlank.getText())) {
+					Score += 10;
+					Game3_4.setVisible(false);
+					Game3_5.setVisible(true);
+					Game3_5Score.setText("현재 점수 : " + Score);
+				}
+				else {
+					Score -= 5;
+					Game3_4Score.setText("현재 점수 : " + Score);
+				}
+				
+				
+			}
+			
+		});
+		
+		Game3_5AnsBtn.addActionListener(new ActionListener() { // 동물 테마 - 문제 3_5 정답 확인
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String Answer = "???";
+				if(Answer.equals(Game3_5AnsBlank.getText())) {
+					Score += 10;
+					Game3_5.setVisible(false);
+					Game3_End.setVisible(true);
+				}
+				else {
+					Score -= 5;
+					Game3_5Score.setText("현재 점수 : " + Score);
+				}
+				
+				
+			}
+			
+		});
 		
 		
 		StartBackTemaBtn.addActionListener(new ActionListener() { // 테마 페이지에서 시작 화면으로 돌아가는 버튼 활성화
@@ -1459,6 +1905,17 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				SelectTemaPage.setVisible(false);
 				GameTema2_Food.setVisible(true);
+				
+			}
+			
+		});
+		
+		Tema3_AnimalBtn.addActionListener(new ActionListener() { // 테마 - 동물 선택 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				SelectTemaPage.setVisible(false);
+				GameTema3_Animal.setVisible(true);
 				
 			}
 			
