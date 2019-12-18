@@ -100,7 +100,7 @@ public class ChoSung_Game extends JFrame {
 		StartPage.add(GameExpBtn);
 		
 		ImageIcon image = new ImageIcon("ChoSung_BackGreound.jpg"); // 게임 시작 이미지
-		JLabel BackGround = new JLabel(new ImageIcon("C:\\Users\\Sung Min Lee\\eclipse-workspace\\ChoSungGame\\image\\ChoSungGif3.gif"));
+		JLabel BackGround = new JLabel(new ImageIcon("./image/ChoSungGif3.gif"));
 		BackGround.setBounds(0, 0, 684, 461);
 		StartPage.add(BackGround);
 		
@@ -203,6 +203,13 @@ public class ChoSung_Game extends JFrame {
 		GameTema2_Food.setLayout(null);
 		
 		GameTema2_Food.setVisible(false);
+
+		JPanel GameTema3_Animal = new JPanel();
+		GameTema3_Animal.setBounds(0, 0, 684, 461);
+		MainPage.add(GameTema3_Animal);
+		GameTema3_Animal.setLayout(null);
+		
+		GameTema3_Animal.setVisible(false);
 		
 		// 문제 1_1
 	
@@ -731,13 +738,13 @@ public class ChoSung_Game extends JFrame {
 		
 		
 		
-		// 테마 - 음식
+		// 문제 2_1
 		
 		JPanel Game2_1 = new JPanel();
 		Game2_1.setBounds(0, 0, 684, 461);
 		GameTema2_Food.add(Game2_1);
 		Game2_1.setLayout(null);
-		
+
 		JLabel StepGame2_1 = new JLabel("문제 1");
 		StepGame2_1.setBounds(38, 33, 90, 39);
 		StepGame2_1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
@@ -1236,11 +1243,6 @@ public class ChoSung_Game extends JFrame {
 		JButton StartBackBtn2_End = new JButton("시작 화면으로");
 		StartBackBtn2_End.setBounds(501, 44, 116, 31);
 		Game2_End.add(StartBackBtn2_End);
-		
-		JPanel GameTema3_Animal = new JPanel();
-		GameTema3_Animal.setBounds(0, 0, 684, 461);
-		MainPage.add(GameTema3_Animal);
-		GameTema3_Animal.setLayout(null);
 		
 		// 문제 3_1
 		
