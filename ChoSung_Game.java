@@ -86,9 +86,10 @@ public class ChoSung_Game extends JFrame {
 		GameExpPage.setVisible(false);
 		StartPage.setLayout(null);
 		
-		JLabel StartLabel = new JLabel("초성 퀴즈 게임");
-		StartLabel.setBounds(203, 127, 276, 78);
-		StartLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
+		JLabel StartLabel = new JLabel("");
+		StartLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		StartLabel.setIcon(new ImageIcon("./image/StartPageTitle.png"));
+		StartLabel.setBounds(71, 108, 547, 81);
 		StartPage.add(StartLabel);
 		
 		JButton StartBtn = new JButton("게임 시작");
