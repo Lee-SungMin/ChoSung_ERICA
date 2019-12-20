@@ -101,11 +101,11 @@ public class ChoSung_Game extends JFrame {
 		StartPage.add(GameExpBtn);
 		
 		ImageIcon image = new ImageIcon("ChoSung_BackGreound.jpg"); // 게임 시작 이미지
-		JLabel BackGround = new JLabel(new ImageIcon("./image/ChoSungGif3.gif"));
-		BackGround.setVerticalAlignment(SwingConstants.TOP);
-		BackGround.setHorizontalAlignment(SwingConstants.LEFT);
-		BackGround.setBounds(0, 0, 640, 370);
-		StartPage.add(BackGround);
+		JLabel StartBackGround = new JLabel(new ImageIcon("./image/ChoSungGif3.gif"));
+		StartBackGround.setVerticalAlignment(SwingConstants.TOP);
+		StartBackGround.setHorizontalAlignment(SwingConstants.LEFT);
+		StartBackGround.setBounds(0, 0, 640, 370);
+		StartPage.add(StartBackGround);
 		
 		StartBtn.addActionListener(new ActionListener() { // 게임 시작 버튼 활성화
 
@@ -160,6 +160,11 @@ public class ChoSung_Game extends JFrame {
 		StartBackExpBtn.setBounds(482, 335, 110, 23);
 		GameExpPage.add(StartBackExpBtn);
 		
+		JLabel ExpBackGround = new JLabel("");
+		ExpBackGround.setIcon(new ImageIcon("./image/ChoSungExp.jpg"));
+		ExpBackGround.setBounds(0, 0, 640, 370);
+		GameExpPage.add(ExpBackGround);
+		
 		StartBackExpBtn.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
 
 			@Override
@@ -173,7 +178,7 @@ public class ChoSung_Game extends JFrame {
 		// 테마 선택 페이지
 		
 		JLabel TemaLabel = new JLabel("<테마 선택>");
-		TemaLabel.setBounds(255, 42, 173, 46);
+		TemaLabel.setBounds(235, 42, 173, 46);
 		TemaLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 35));
 		SelectTemaPage.add(TemaLabel);
 		
@@ -192,6 +197,11 @@ public class ChoSung_Game extends JFrame {
 		JButton StartBackTemaBtn = new JButton("시작 화면으로");
 		StartBackTemaBtn.setBounds(482, 335, 110, 23);
 		SelectTemaPage.add(StartBackTemaBtn);
+		
+		JLabel SelectBackGround = new JLabel("");
+		SelectBackGround.setIcon(new ImageIcon(".image/ChoSungSelect.jpg"));
+		SelectBackGround.setBounds(0, 0, 640, 370);
+		SelectTemaPage.add(SelectBackGround);
 		
 		// 테마 - 브랜드 3개
 		
@@ -312,6 +322,11 @@ public class ChoSung_Game extends JFrame {
 		Game1_1Hint.setBounds(533, 138, 70, 39);
 		Game1_1.add(Game1_1Hint);
 		
+		JLabel Game1_1BackGround = new JLabel("");
+		Game1_1BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game1_1BackGround.setBounds(0, 0, 640, 370);
+		Game1_1.add(Game1_1BackGround);
+		
 		Game1_2.setVisible(false);
 		
 		StartBackBtn1_1.addActionListener(new ActionListener() { // 문제 1-1 에서 시작 화면으로 돌아가는 버튼 활성화
@@ -404,6 +419,11 @@ public class ChoSung_Game extends JFrame {
 		Game1_2Hint.setBounds(533, 138, 70, 39);
 		Game1_2.add(Game1_2Hint);
 		
+		JLabel Game1_2BackGround = new JLabel("");
+		Game1_2BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game1_2BackGround.setBounds(0, 0, 640, 370);
+		Game1_2.add(Game1_2BackGround);
+		
 		JButton StartBackBtn1_2 = new JButton("시작 화면으로");
 		StartBackBtn1_2.setBounds(501, 44, 116, 31);
 		Game1_2.add(StartBackBtn1_2);
@@ -493,6 +513,11 @@ public class ChoSung_Game extends JFrame {
 		Game1_3Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
 		Game1_3Hint.setBounds(533, 138, 70, 39);
 		Game1_3.add(Game1_3Hint);
+		
+		JLabel Game1_3BackGround = new JLabel("");
+		Game1_3BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game1_3BackGround.setBounds(0, 0, 640, 370);
+		Game1_3.add(Game1_3BackGround);
 		
 		JButton StartBackBtn1_3 = new JButton("시작 화면으로");
 		StartBackBtn1_3.setBounds(501, 44, 116, 31);
@@ -584,6 +609,11 @@ public class ChoSung_Game extends JFrame {
 		Game1_4Hint.setBounds(533, 138, 70, 39);
 		Game1_4.add(Game1_4Hint);
 		
+		JLabel Game1_4BackGround = new JLabel("");
+		Game1_4BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game1_4BackGround.setBounds(0, 0, 640, 370);
+		Game1_4.add(Game1_4BackGround);
+		
 		JButton StartBackBtn1_4 = new JButton("시작 화면으로");
 		StartBackBtn1_4.setBounds(501, 44, 116, 31);
 		Game1_4.add(StartBackBtn1_4);
@@ -673,6 +703,11 @@ public class ChoSung_Game extends JFrame {
 		Game1_5Hint.setBounds(533, 138, 70, 39);
 		Game1_5.add(Game1_5Hint);
 		
+		JLabel Game1_5BackGround = new JLabel("");
+		Game1_5BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game1_5BackGround.setBounds(0, 0, 640, 370);
+		Game1_5.add(Game1_5BackGround);
+		
 		JButton StartBackBtn1_5 = new JButton("시작 화면으로");
 		StartBackBtn1_5.setBounds(501, 44, 116, 31);
 		Game1_5.add(StartBackBtn1_5);
@@ -692,6 +727,11 @@ public class ChoSung_Game extends JFrame {
 		JButton StartBackBtn1_End = new JButton("시작 화면으로");
 		StartBackBtn1_End.setBounds(501, 44, 116, 31);
 		Game1_End.add(StartBackBtn1_End);
+		
+		JLabel Game1EndBackGround = new JLabel("");
+		Game1EndBackGround.setIcon(new ImageIcon(".image/ChoSungTemaEnd.png"));
+		Game1EndBackGround.setBounds(0, 0, 640, 370);
+		Game1_End.add(Game1EndBackGround);
 		
 		StartBackBtn1_2.addActionListener(new ActionListener() { // 문제 1-2 에서 시작 화면으로 돌아가는 버튼 활성화
 
@@ -772,6 +812,11 @@ public class ChoSung_Game extends JFrame {
 		Game2_1Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
 		Game2_1Hint.setBounds(533, 138, 70, 39);
 		Game2_1.add(Game2_1Hint);
+		
+		JLabel Game2_1BackGround = new JLabel("");
+		Game2_1BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game2_1BackGround.setBounds(0, 0, 640, 370);
+		Game2_1.add(Game2_1BackGround);
 		
 		JButton Game2_1Hint1 = new JButton("힌트 1");
 		Game2_1Hint1.setBounds(520, 201, 97, 23);
@@ -871,6 +916,11 @@ public class ChoSung_Game extends JFrame {
 		Game2_2Hint.setBounds(533, 138, 70, 39);
 		Game2_2.add(Game2_2Hint);
 		
+		JLabel Game2_2BackGround = new JLabel("");
+		Game2_2BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game2_2BackGround.setBounds(0, 0, 640, 370);
+		Game2_2.add(Game2_2BackGround);
+		
 		JButton Game2_2Hint1 = new JButton("힌트 1");
 		Game2_2Hint1.setBounds(520, 201, 97, 23);
 		Game2_2.add(Game2_2Hint1);
@@ -968,6 +1018,11 @@ public class ChoSung_Game extends JFrame {
 		Game2_3Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
 		Game2_3Hint.setBounds(533, 138, 70, 39);
 		Game2_3.add(Game2_3Hint);
+		
+		JLabel Game2_3BackGround = new JLabel("");
+		Game2_3BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game2_3BackGround.setBounds(0, 0, 640, 370);
+		Game2_3.add(Game2_3BackGround);
 		
 		JButton Game2_3Hint1 = new JButton("힌트 1");
 		Game2_3Hint1.setBounds(520, 201, 97, 23);
@@ -1067,6 +1122,11 @@ public class ChoSung_Game extends JFrame {
 		Game2_4Hint.setBounds(533, 138, 70, 39);
 		Game2_4.add(Game2_4Hint);
 		
+		JLabel Game2_4BackGround = new JLabel("");
+		Game2_4BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game2_4BackGround.setBounds(0, 0, 640, 370);
+		Game2_4.add(Game2_4BackGround);
+		
 		JButton Game2_4Hint1 = new JButton("힌트 1");
 		Game2_4Hint1.setBounds(520, 201, 97, 23);
 		Game2_4.add(Game2_4Hint1);
@@ -1165,6 +1225,11 @@ public class ChoSung_Game extends JFrame {
 		Game2_5Hint.setBounds(533, 138, 70, 39);
 		Game2_5.add(Game2_5Hint);
 		
+		JLabel Game2_5BackGround = new JLabel("");
+		Game2_5BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game2_5BackGround.setBounds(0, 0, 640, 370);
+		Game2_5.add(Game2_5BackGround);
+		
 		JButton Game2_5Hint1 = new JButton("힌트 1");
 		Game2_5Hint1.setBounds(520, 201, 97, 23);
 		Game2_5.add(Game2_5Hint1);
@@ -1248,6 +1313,11 @@ public class ChoSung_Game extends JFrame {
 		Game2_EndLabel.setBounds(150, 127, 392, 78);
 		Game2_End.add(Game2_EndLabel);
 		
+		JLabel Game2EndBackGround = new JLabel("");
+		Game2EndBackGround.setIcon(new ImageIcon(".image/ChoSungTemaEnd.png"));
+		Game2EndBackGround.setBounds(0, 0, 640, 370);
+		Game2_End.add(Game2EndBackGround);
+		
 		JButton StartBackBtn2_End = new JButton("시작 화면으로");
 		StartBackBtn2_End.setBounds(501, 44, 116, 31);
 		Game2_End.add(StartBackBtn2_End);
@@ -1278,6 +1348,11 @@ public class ChoSung_Game extends JFrame {
 		Game3_1Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
 		Game3_1Hint.setBounds(533, 138, 70, 39);
 		Game3_1.add(Game3_1Hint);
+		
+		JLabel Game3_1BackGround = new JLabel("");
+		Game3_1BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game3_1BackGround.setBounds(0, 0, 640, 370);
+		Game3_1.add(Game3_1BackGround);
 		
 		JButton Game3_1Hint1 = new JButton("힌트 1");
 		Game3_1Hint1.setBounds(520, 201, 97, 23);
@@ -1341,6 +1416,11 @@ public class ChoSung_Game extends JFrame {
 		Game3_2Hint.setBounds(533, 138, 70, 39);
 		Game3_2.add(Game3_2Hint);
 		
+		JLabel Game3_2BackGround = new JLabel("");
+		Game3_2BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game3_2BackGround.setBounds(0, 0, 640, 370);
+		Game3_2.add(Game3_2BackGround);
+		
 		JButton Game3_2Hint1 = new JButton("힌트 1");
 		Game3_2Hint1.setBounds(520, 201, 97, 23);
 		Game3_2.add(Game3_2Hint1);
@@ -1402,6 +1482,11 @@ public class ChoSung_Game extends JFrame {
 		Game3_3Hint.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 15));
 		Game3_3Hint.setBounds(533, 138, 70, 39);
 		Game3_3.add(Game3_3Hint);
+		
+		JLabel Game3_3BackGround = new JLabel("");
+		Game3_3BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game3_3BackGround.setBounds(0, 0, 640, 370);
+		Game3_3.add(Game3_3BackGround);
 		
 		JButton Game3_3Hint1 = new JButton("힌트 1");
 		Game3_3Hint1.setBounds(520, 201, 97, 23);
@@ -1465,6 +1550,11 @@ public class ChoSung_Game extends JFrame {
 		Game3_4Hint.setBounds(533, 138, 70, 39);
 		Game3_4.add(Game3_4Hint);
 		
+		JLabel Game3_4BackGround = new JLabel("");
+		Game3_4BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game3_4BackGround.setBounds(0, 0, 640, 370);
+		Game3_4.add(Game3_4BackGround);
+		
 		JButton Game3_4Hint1 = new JButton("힌트 1");
 		Game3_4Hint1.setBounds(520, 201, 97, 23);
 		Game3_4.add(Game3_4Hint1);
@@ -1527,6 +1617,11 @@ public class ChoSung_Game extends JFrame {
 		Game3_5Hint.setBounds(533, 138, 70, 39);
 		Game3_5.add(Game3_5Hint);
 		
+		JLabel Game3_5BackGround = new JLabel("");
+		Game3_5BackGround.setIcon(new ImageIcon(".image/ChoSungPlay.jpg"));
+		Game3_5BackGround.setBounds(0, 0, 640, 370);
+		Game3_5.add(Game3_5BackGround);
+		
 		JButton Game3_5HInt1 = new JButton("힌트 1");
 		Game3_5HInt1.setBounds(520, 201, 97, 23);
 		Game3_5.add(Game3_5HInt1);
@@ -1573,6 +1668,11 @@ public class ChoSung_Game extends JFrame {
 		Game3_EndLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
 		Game3_EndLabel.setBounds(150, 127, 392, 78);
 		Game3_End.add(Game3_EndLabel);
+		
+		JLabel Game3EndBackGround = new JLabel("");
+		Game3EndBackGround.setIcon(new ImageIcon(".image/ChoSungTemaEnd.png"));
+		Game3EndBackGround.setBounds(0, 0, 640, 370);
+		Game3_End.add(Game3EndBackGround);
 		
 		JButton StartBackBtn3_End = new JButton("시작 화면으로");
 		StartBackBtn3_End.setBounds(501, 44, 116, 31);
