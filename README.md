@@ -28,7 +28,8 @@ In other words, **ChoSung** refers to initial sound.
 
 5. **개발자 정보**: 소프트웨어학부 2019000773 이성민 (1명)
 
-6. **게임 시안**:
+6. **게임 시안**:  
+#
 <img src = "./image/GameDraft1.jpg" width="288" height="400"><img src = "./image/GameDraft2.jpg" width="288" height="400"><img src = "./image/GameDraft3.jpg" width="288" height="400">
 
 7. **게임 방법**: 어떤 단어의 초성이 주어지면, 개발자가 지정해 놓은 단어로 답을 입력하여 점수를 획득하세요
