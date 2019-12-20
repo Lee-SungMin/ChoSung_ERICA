@@ -61,25 +61,25 @@ public class ChoSung_Game extends JFrame {
 	public ChoSung_Game() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(650, 300, 700, 500);
+		setBounds(650, 300, 656, 409);
 		MainPage = new JPanel();
 		MainPage.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(MainPage);
 		MainPage.setLayout(null);
 		
 		JPanel StartPage = new JPanel();
-		StartPage.setBounds(0, 0, 684, 461);
+		StartPage.setBounds(0, 0, 640, 370);
 		MainPage.add(StartPage);
 		
 		JPanel SelectTemaPage = new JPanel();
-		SelectTemaPage.setBounds(0, 0, 684, 461);
+		SelectTemaPage.setBounds(0, 0, 640, 370);
 		MainPage.add(SelectTemaPage);
 		SelectTemaPage.setLayout(null);
 		
 		SelectTemaPage.setVisible(false);
 		
 		JPanel GameExpPage = new JPanel();
-		GameExpPage.setBounds(0, 0, 684, 461);
+		GameExpPage.setBounds(0, 0, 640, 370);
 		MainPage.add(GameExpPage);
 		GameExpPage.setLayout(null);
 		
@@ -89,20 +89,22 @@ public class ChoSung_Game extends JFrame {
 		JLabel StartLabel = new JLabel("");
 		StartLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		StartLabel.setIcon(new ImageIcon("./image/StartPageTitle.png"));
-		StartLabel.setBounds(71, 108, 547, 81);
+		StartLabel.setBounds(28, 108, 590, 81);
 		StartPage.add(StartLabel);
 		
 		JButton StartBtn = new JButton("게임 시작");
-		StartBtn.setBounds(225, 346, 97, 23);
+		StartBtn.setBounds(213, 298, 97, 23);
 		StartPage.add(StartBtn);
 		
 		JButton GameExpBtn = new JButton("게임 설명");
-		GameExpBtn.setBounds(345, 346, 97, 23);
+		GameExpBtn.setBounds(343, 298, 97, 23);
 		StartPage.add(GameExpBtn);
 		
 		ImageIcon image = new ImageIcon("ChoSung_BackGreound.jpg"); // 게임 시작 이미지
 		JLabel BackGround = new JLabel(new ImageIcon("./image/ChoSungGif3.gif"));
-		BackGround.setBounds(0, 0, 684, 461);
+		BackGround.setVerticalAlignment(SwingConstants.TOP);
+		BackGround.setHorizontalAlignment(SwingConstants.LEFT);
+		BackGround.setBounds(0, 0, 640, 370);
 		StartPage.add(BackGround);
 		
 		StartBtn.addActionListener(new ActionListener() { // 게임 시작 버튼 활성화
@@ -128,34 +130,34 @@ public class ChoSung_Game extends JFrame {
 		
 		JLabel GameExpTitle = new JLabel("<게임 설명>");
 		GameExpTitle.setFont(new Font("한컴산뜻돋움", Font.BOLD, 35));
-		GameExpTitle.setBounds(35, 42, 173, 46);
+		GameExpTitle.setBounds(35, 35, 173, 46);
 		GameExpPage.add(GameExpTitle);
 		
 		JLabel GameExp1 = new JLabel("-초성 퀴즈란?");
 		GameExp1.setVerticalAlignment(SwingConstants.TOP);
 		GameExp1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 16));
-		GameExp1.setBounds(35, 118, 110, 21);
+		GameExp1.setBounds(35, 100, 110, 21);
 		GameExpPage.add(GameExp1);
 		
 		JLabel GameExp1_1 = new JLabel("한글을 이용한 놀이 중 하나로, 어떤 단어의 초성만을 알려주고 그 단어를 알아맞히는 놀이이다.");
 		GameExp1_1.setForeground(Color.DARK_GRAY);
 		GameExp1_1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 14));
-		GameExp1_1.setBounds(35, 149, 557, 21);
+		GameExp1_1.setBounds(35, 130, 557, 21);
 		GameExpPage.add(GameExp1_1);
 		
 		JLabel GameExp2 = new JLabel("-게임 방법 및 룰 설명");
 		GameExp2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 16));
-		GameExp2.setBounds(35, 203, 163, 21);
+		GameExp2.setBounds(35, 180, 163, 21);
 		GameExpPage.add(GameExp2);
 		
 		JLabel GameExp2_1 = new JLabel("<html>게임 방법 : 문제에 주어진 초성을 보고 개발자가 지정해 놓은 정답을 맞추면 됩니다.<br>" + "(힌트를 사용하면 문제를 쉽게 맞출 수 있습니다.)<br>" + " <br>" + " 게임 룰 : 문제를 맞춘 경우 +10점, 틀린 경우 -5점, 힌트 1 사용시 -3점, 힌트 2 사용시 -5점, 힌트 3 사용시 -7점<html>");
 		GameExp2_1.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 14));
 		GameExp2_1.setForeground(Color.DARK_GRAY);
-		GameExp2_1.setBounds(35, 212, 615, 143);
+		GameExp2_1.setBounds(35, 200, 574, 143);
 		GameExpPage.add(GameExp2_1);
 		
 		JButton StartBackExpBtn = new JButton("시작 화면으로");
-		StartBackExpBtn.setBounds(482, 404, 110, 23);
+		StartBackExpBtn.setBounds(482, 335, 110, 23);
 		GameExpPage.add(StartBackExpBtn);
 		
 		StartBackExpBtn.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
@@ -168,6 +170,7 @@ public class ChoSung_Game extends JFrame {
 			
 		});
 		
+		// 테마 선택 페이지
 		
 		JLabel TemaLabel = new JLabel("<테마 선택>");
 		TemaLabel.setBounds(255, 42, 173, 46);
@@ -175,38 +178,40 @@ public class ChoSung_Game extends JFrame {
 		SelectTemaPage.add(TemaLabel);
 		
 		JButton Tema1_BrandBtn = new JButton("브랜드");
-		Tema1_BrandBtn.setBounds(294, 127, 97, 23);
+		Tema1_BrandBtn.setBounds(270, 127, 97, 23);
 		SelectTemaPage.add(Tema1_BrandBtn);
 		
 		JButton Tema2_FoodBtn = new JButton("음식");
-		Tema2_FoodBtn.setBounds(294, 187, 97, 23);
+		Tema2_FoodBtn.setBounds(270, 187, 97, 23);
 		SelectTemaPage.add(Tema2_FoodBtn);
 		
 		JButton Tema3_AnimalBtn = new JButton("동물");
-		Tema3_AnimalBtn.setBounds(294, 247, 97, 23);
+		Tema3_AnimalBtn.setBounds(270, 247, 97, 23);
 		SelectTemaPage.add(Tema3_AnimalBtn);
 		
 		JButton StartBackTemaBtn = new JButton("시작 화면으로");
-		StartBackTemaBtn.setBounds(482, 404, 110, 23);
+		StartBackTemaBtn.setBounds(482, 335, 110, 23);
 		SelectTemaPage.add(StartBackTemaBtn);
+		
+		// 테마 - 브랜드 3개
 		
 		
 		JPanel GameTema1_Brand = new JPanel();
-		GameTema1_Brand.setBounds(0, 0, 684, 461);
+		GameTema1_Brand.setBounds(0, 0, 640, 370);
 		MainPage.add(GameTema1_Brand);
 		GameTema1_Brand.setLayout(null);
 		
 		GameTema1_Brand.setVisible(false);
 		
 		JPanel GameTema2_Food = new JPanel();
-		GameTema2_Food.setBounds(0, 0, 684, 461);
+		GameTema2_Food.setBounds(0, 0, 640, 370);
 		MainPage.add(GameTema2_Food);
 		GameTema2_Food.setLayout(null);
 		
 		GameTema2_Food.setVisible(false);
 
 		JPanel GameTema3_Animal = new JPanel();
-		GameTema3_Animal.setBounds(0, 0, 684, 461);
+		GameTema3_Animal.setBounds(0, 0, 640, 370);
 		MainPage.add(GameTema3_Animal);
 		GameTema3_Animal.setLayout(null);
 		
@@ -215,11 +220,11 @@ public class ChoSung_Game extends JFrame {
 		// 문제 1_1
 	
 		JPanel Game1_1 = new JPanel();
-		Game1_1.setBounds(0, 0, 684, 461);
+		Game1_1.setBounds(0, 0, 640, 370);
 		GameTema1_Brand.add(Game1_1);
 		
 		JPanel Game1_2 = new JPanel();
-		Game1_2.setBounds(0, 0, 684, 461);
+		Game1_2.setBounds(0, 0, 640, 370);
 		GameTema1_Brand.add(Game1_2);
 		Game1_2.setLayout(null);
 		Game1_1.setLayout(null);
@@ -238,20 +243,20 @@ public class ChoSung_Game extends JFrame {
 		Game1_1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1_1.add(Game1_1Quiz);
 		
-		JLabel Game1_1Score = new JLabel("현재 점수 : 0");
+		JLabel Game1_1Score = new JLabel("현재 점수 : " + Score);
 		Game1_1Score.setBounds(307, 37, 168, 39);
 		Game1_1Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_1.add(Game1_1Score);
 		
 		Game1_1AnsBlank = new JTextField();
-		Game1_1AnsBlank.setBounds(70, 352, 230, 39);
+		Game1_1AnsBlank.setBounds(70, 310, 230, 39);
 		Game1_1AnsBlank.setText("이곳에 정답을 입력하세요");
 		Game1_1.add(Game1_1AnsBlank);
 		Game1_1AnsBlank.setColumns(10);
 		
 		
 		JButton Game1_1AnsBtn = new JButton("제출하기");
-		Game1_1AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_1AnsBtn.setBounds(340, 310, 121, 39);
 		Game1_1.add(Game1_1AnsBtn);
 		
 		JButton Game1_1Hint1 = new JButton("힌트 1");
@@ -319,6 +324,8 @@ public class ChoSung_Game extends JFrame {
 			
 		});
 		
+		// 문제 1_2
+		
 		JLabel StepGame1_2 = new JLabel("문제 2");
 		StepGame1_2.setBounds(38, 33, 90, 39);
 		StepGame1_2.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 30));
@@ -336,12 +343,12 @@ public class ChoSung_Game extends JFrame {
 		
 		Game1_2AnsBlank = new JTextField();
 		Game1_2AnsBlank.setText("이곳에 정답을 입력하세요");
-		Game1_2AnsBlank.setBounds(153, 352, 147, 39);
+		Game1_2AnsBlank.setBounds(153, 310, 147, 39);
 		Game1_2.add(Game1_2AnsBlank);
 		Game1_2AnsBlank.setColumns(10);
 		
 		JButton Game1_2AnsBtn = new JButton("제출하기");
-		Game1_2AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_2AnsBtn.setBounds(340, 310, 121, 39);
 		Game1_2.add(Game1_2AnsBtn);
 		
 		JButton Game1_2Hint1 = new JButton("힌트 1");
@@ -404,7 +411,7 @@ public class ChoSung_Game extends JFrame {
 		//문제 1_3
 		
 		JPanel Game1_3 = new JPanel();
-		Game1_3.setBounds(0, 0, 684, 461);
+		Game1_3.setBounds(0, 0, 640, 370);
 		GameTema1_Brand.add(Game1_3);
 		
 		Game1_3.setVisible(false);
@@ -426,12 +433,12 @@ public class ChoSung_Game extends JFrame {
 		Game1_3.add(Game1_3Score);
 		
 		Game1_3AnsBlank = new JTextField("이곳에 정답을 입력하세요");
-		Game1_3AnsBlank.setBounds(153, 352, 147, 39);
+		Game1_3AnsBlank.setBounds(153, 310, 147, 39);
 		Game1_3.add(Game1_3AnsBlank);
 		Game1_3AnsBlank.setColumns(10);
 		
 		JButton Game1_3AnsBtn = new JButton("제출하기");
-		Game1_3AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_3AnsBtn.setBounds(340, 310, 121, 39);
 		Game1_3.add(Game1_3AnsBtn);
 		
 		JButton Game1_3Hint1 = new JButton("힌트 1");
@@ -494,7 +501,7 @@ public class ChoSung_Game extends JFrame {
 		// 문제 1_4
 		
 		JPanel Game1_4 = new JPanel();
-		Game1_4.setBounds(0, 0, 684, 461);
+		Game1_4.setBounds(0, 0, 640, 370);
 		GameTema1_Brand.add(Game1_4);
 		Game1_4.setVisible(false);
 		Game1_4.setLayout(null);
@@ -516,12 +523,12 @@ public class ChoSung_Game extends JFrame {
 		Game1_4.add(Game1_4Score);
 		
 		Game1_4AnsBlank = new JTextField();
-		Game1_4AnsBlank.setBounds(153, 352, 147, 39);
+		Game1_4AnsBlank.setBounds(153, 310, 147, 39);
 		Game1_4.add(Game1_4AnsBlank);
 		Game1_4AnsBlank.setColumns(10);
 		
 		JButton Game1_4AnsBtn = new JButton("제출하기");
-		Game1_4AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_4AnsBtn.setBounds(340, 310, 121, 39);
 		Game1_4.add(Game1_4AnsBtn);
 		
 		JButton Game1_4Hint1 = new JButton("힌트 1");
@@ -584,7 +591,7 @@ public class ChoSung_Game extends JFrame {
 		// 문제 1_5
 		
 		JPanel Game1_5 = new JPanel();
-		Game1_5.setBounds(0, 0, 684, 461);
+		Game1_5.setBounds(0, 0, 640, 370);
 		GameTema1_Brand.add(Game1_5);
 		Game1_5.setVisible(false);
 		Game1_5.setLayout(null);
@@ -605,12 +612,12 @@ public class ChoSung_Game extends JFrame {
 		Game1_5.add(Game1_5Score);
 		
 		Game1_5AnsBlank = new JTextField();
-		Game1_5AnsBlank.setBounds(153, 352, 147, 39);
+		Game1_5AnsBlank.setBounds(153, 310, 147, 39);
 		Game1_5.add(Game1_5AnsBlank);
 		Game1_5AnsBlank.setColumns(10);
 		
 		JButton Game1_5AnsBtn = new JButton("제출하기");
-		Game1_5AnsBtn.setBounds(340, 352, 121, 39);
+		Game1_5AnsBtn.setBounds(340, 310, 121, 39);
 		Game1_5.add(Game1_5AnsBtn);
 		
 		JButton Game1_5Hint1 = new JButton("힌트 1");
@@ -673,7 +680,7 @@ public class ChoSung_Game extends JFrame {
 		// 테마 1_브랜드 끝
 		
 		JPanel Game1_End = new JPanel();
-		Game1_End.setBounds(0, 0, 684, 461);
+		Game1_End.setBounds(0, 0, 640, 370);
 		GameTema1_Brand.add(Game1_End);
 		Game1_End.setLayout(null);
 		
@@ -742,7 +749,7 @@ public class ChoSung_Game extends JFrame {
 		// 문제 2_1
 		
 		JPanel Game2_1 = new JPanel();
-		Game2_1.setBounds(0, 0, 684, 461);
+		Game2_1.setBounds(0, 0, 640, 370);
 		GameTema2_Food.add(Game2_1);
 		Game2_1.setLayout(null);
 
@@ -829,18 +836,18 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game2_1AnsBtn = new JButton("제출하기");
-		Game2_1AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_1AnsBtn.setBounds(340, 310, 121, 39);
 		Game2_1.add(Game2_1AnsBtn);
 		
 		Game2_1AnsBlank = new JTextField("");
-		Game2_1AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_1AnsBlank.setBounds(153, 310, 147, 39);
 		Game2_1.add(Game2_1AnsBlank);
 		Game2_1AnsBlank.setColumns(10);
 		
 		// 문제 2_2
 		
 		JPanel Game2_2 = new JPanel();
-		Game2_2.setBounds(0, 0, 684, 461);
+		Game2_2.setBounds(0, 0, 640, 370);
 		GameTema2_Food.add(Game2_2);
 		Game2_2.setLayout(null);
 		
@@ -927,11 +934,11 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game2_2AnsBtn = new JButton("제출 하기");
-		Game2_2AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_2AnsBtn.setBounds(340, 310, 121, 39);
 		Game2_2.add(Game2_2AnsBtn);
 		
 		Game2_2AnsBlank = new JTextField();
-		Game2_2AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_2AnsBlank.setBounds(153, 310, 147, 39);
 		Game2_2.add(Game2_2AnsBlank);
 		Game2_2AnsBlank.setColumns(10);
 		
@@ -939,7 +946,7 @@ public class ChoSung_Game extends JFrame {
 		
 		JPanel Game2_3 = new JPanel();
 		Game2_3.setLayout(null);
-		Game2_3.setBounds(0, 0, 684, 461);
+		Game2_3.setBounds(0, 0, 640, 370);
 		GameTema2_Food.add(Game2_3);
 		
 		JLabel StepGame2_3 = new JLabel("문제 3");
@@ -1025,19 +1032,19 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game2_3AnsBtn = new JButton("제출 하기");
-		Game2_3AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_3AnsBtn.setBounds(340, 310, 121, 39);
 		Game2_3.add(Game2_3AnsBtn);
 		
 		Game2_3AnsBlank = new JTextField();
 		Game2_3AnsBlank.setColumns(10);
-		Game2_3AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_3AnsBlank.setBounds(153, 310, 147, 39);
 		Game2_3.add(Game2_3AnsBlank);
 		
 		// 문제 2_4
 		
 		JPanel Game2_4 = new JPanel();
 		Game2_4.setLayout(null);
-		Game2_4.setBounds(0, 0, 684, 461);
+		Game2_4.setBounds(0, 0, 640, 370);
 		GameTema2_Food.add(Game2_4);
 		
 		JLabel StepGame2_4 = new JLabel("문제 4");
@@ -1123,19 +1130,19 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game2_4AnsBtn = new JButton("제출 하기");
-		Game2_4AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_4AnsBtn.setBounds(340, 310, 121, 39);
 		Game2_4.add(Game2_4AnsBtn);
 		
 		Game2_4AnsBlank = new JTextField();
 		Game2_4AnsBlank.setColumns(10);
-		Game2_4AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_4AnsBlank.setBounds(153, 310, 147, 39);
 		Game2_4.add(Game2_4AnsBlank);
 		
 		// 문제 2_5
 		
 		JPanel Game2_5 = new JPanel();
 		Game2_5.setLayout(null);
-		Game2_5.setBounds(0, 0, 684, 461);
+		Game2_5.setBounds(0, 0, 640, 370);
 		GameTema2_Food.add(Game2_5);
 		
 		JLabel StepGame2_5 = new JLabel("문제 5");
@@ -1221,19 +1228,19 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game2_5AnsBtn = new JButton("제출 하기");
-		Game2_5AnsBtn.setBounds(340, 352, 121, 39);
+		Game2_5AnsBtn.setBounds(340, 310, 121, 39);
 		Game2_5.add(Game2_5AnsBtn);
 		
 		Game2_5AnsBlank = new JTextField();
 		Game2_5AnsBlank.setColumns(10);
-		Game2_5AnsBlank.setBounds(153, 352, 147, 39);
+		Game2_5AnsBlank.setBounds(153, 310, 147, 39);
 		Game2_5.add(Game2_5AnsBlank);
 		
 		// 테마2_음식 끝
 		
 		JPanel Game2_End = new JPanel();
 		Game2_End.setLayout(null);
-		Game2_End.setBounds(0, 0, 684, 461);
+		Game2_End.setBounds(0, 0, 640, 370);
 		GameTema2_Food.add(Game2_End);
 		
 		JLabel Game2_EndLabel = new JLabel("음식 테마 클리어 !");
@@ -1249,7 +1256,7 @@ public class ChoSung_Game extends JFrame {
 		
 		JPanel Game3_1 = new JPanel();
 		Game3_1.setLayout(null);
-		Game3_1.setBounds(0, 0, 684, 461);
+		Game3_1.setBounds(0, 0, 640, 370);
 		GameTema3_Animal.add(Game3_1);
 		
 		JLabel StepGame3_1 = new JLabel("문제 1");
@@ -1299,19 +1306,19 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game3_1AnsBtn = new JButton("제출 하기");
-		Game3_1AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_1AnsBtn.setBounds(340, 310, 121, 39);
 		Game3_1.add(Game3_1AnsBtn);
 		
 		Game3_1AnsBlank = new JTextField("");
 		Game3_1AnsBlank.setColumns(10);
-		Game3_1AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_1AnsBlank.setBounds(153, 310, 147, 39);
 		Game3_1.add(Game3_1AnsBlank);
 		
 		// 문제 3_2
 		
 		JPanel Game3_2 = new JPanel();
 		Game3_2.setLayout(null);
-		Game3_2.setBounds(0, 0, 684, 461);
+		Game3_2.setBounds(0, 0, 640, 370);
 		GameTema3_Animal.add(Game3_2);
 		
 		JLabel StepGame3_2 = new JLabel("문제 2");
@@ -1361,19 +1368,19 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game3_2AnsBtn = new JButton("제출 하기");
-		Game3_2AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_2AnsBtn.setBounds(340, 310, 121, 39);
 		Game3_2.add(Game3_2AnsBtn);
 		
 		Game3_2AnsBlank = new JTextField("");
 		Game3_2AnsBlank.setColumns(10);
-		Game3_2AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_2AnsBlank.setBounds(153, 310, 147, 39);
 		Game3_2.add(Game3_2AnsBlank);
 		
 		// 문제 3_3
 		
 		JPanel Game3_3 = new JPanel();
 		Game3_3.setLayout(null);
-		Game3_3.setBounds(0, 0, 684, 461);
+		Game3_3.setBounds(0, 0, 640, 370);
 		GameTema3_Animal.add(Game3_3);
 		
 		JLabel StepGame3_3 = new JLabel("문제 3");
@@ -1428,14 +1435,14 @@ public class ChoSung_Game extends JFrame {
 		
 		Game3_3AnsBlank = new JTextField();
 		Game3_3AnsBlank.setColumns(10);
-		Game3_3AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_3AnsBlank.setBounds(153, 310, 147, 39);
 		Game3_3.add(Game3_3AnsBlank);
 		
 		// 문제 3_4
 		
 		JPanel Game3_4 = new JPanel();
 		Game3_4.setLayout(null);
-		Game3_4.setBounds(0, 0, 684, 461);
+		Game3_4.setBounds(0, 0, 640, 370);
 		GameTema3_Animal.add(Game3_4);
 		
 		JLabel StepGame3_4 = new JLabel("문제 4");
@@ -1485,19 +1492,19 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game3_4AnsBtn = new JButton("제출 하기");
-		Game3_4AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_4AnsBtn.setBounds(340, 310, 121, 39);
 		Game3_4.add(Game3_4AnsBtn);
 		
 		Game3_4AnsBlank = new JTextField();
 		Game3_4AnsBlank.setColumns(10);
-		Game3_4AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_4AnsBlank.setBounds(153, 310, 147, 39);
 		Game3_4.add(Game3_4AnsBlank);
 		
 		// 문제 3_5
 		
 		JPanel Game3_5 = new JPanel();
 		Game3_5.setLayout(null);
-		Game3_5.setBounds(0, 0, 684, 461);
+		Game3_5.setBounds(0, 0, 640, 370);
 		GameTema3_Animal.add(Game3_5);
 		
 		JLabel StepGame3_5 = new JLabel("문제 5");
@@ -1547,19 +1554,19 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game3_5AnsBtn = new JButton("제출 하기");
-		Game3_5AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_5AnsBtn.setBounds(340, 310, 121, 39);
 		Game3_5.add(Game3_5AnsBtn);
 		
 		Game3_5AnsBlank = new JTextField();
 		Game3_5AnsBlank.setColumns(10);
-		Game3_5AnsBlank.setBounds(153, 352, 147, 39);
+		Game3_5AnsBlank.setBounds(153, 310, 147, 39);
 		Game3_5.add(Game3_5AnsBlank);
 		
 		// 테마3_동물 끝
 		
 		JPanel Game3_End = new JPanel();
 		Game3_End.setLayout(null);
-		Game3_End.setBounds(0, 0, 684, 461);
+		Game3_End.setBounds(0, 0, 640, 370);
 		GameTema3_Animal.add(Game3_End);
 		
 		JLabel Game3_EndLabel = new JLabel("동물 테마 클리어 !");
