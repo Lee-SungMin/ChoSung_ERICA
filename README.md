@@ -38,7 +38,7 @@ In other words, **ChoSung** refers to initial sound.
 
 9. **게임 실행 화면**:
 #
-<img src = "./image/ChoSung1.png" width="288" height = "150"><img src = "./image/ChoSung3.png" width="288" height = "150"><img src = "./image/ChoSung5.png" width="150" height = "400"><img src = "./image/ChoSung2.png" width="288" height = "150"><img src = "./image/ChoSung4.png" width="288" height = "150"><img src = "./image/ChoSung6.png" width="288" height = "150">
+<img src = "./image/ChoSung1.png" width="288" height = "170"><img src = "./image/ChoSung3.png" width="288" height = "170"><img src = "./image/ChoSung5.png" width="150" height = "170"><img src = "./image/ChoSung2.png" width="288" height = "170"><img src = "./image/ChoSung4.png" width="288" height = "170"><img src = "./image/ChoSung6.png" width="288" height = "170">
   
 ## [개발 기록 일지]
   
