@@ -407,8 +407,8 @@ public class ChoSung_Game extends JFrame {
 		Game1_2.add(Game1_2Score);
 		
 		Game1_2AnsBlank = new JTextField();
-		Game1_2AnsBlank.setText("이곳에 정답을 입력하세요");
-		Game1_2AnsBlank.setBounds(153, 310, 147, 39);
+		Game1_2AnsBlank.setText("");
+		Game1_2AnsBlank.setBounds(70, 310, 230, 39);
 		Game1_2.add(Game1_2AnsBlank);
 		Game1_2AnsBlank.setColumns(10);
 		
@@ -502,8 +502,8 @@ public class ChoSung_Game extends JFrame {
 		Game1_3Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_3.add(Game1_3Score);
 		
-		Game1_3AnsBlank = new JTextField("이곳에 정답을 입력하세요");
-		Game1_3AnsBlank.setBounds(153, 310, 147, 39);
+		Game1_3AnsBlank = new JTextField("");
+		Game1_3AnsBlank.setBounds(70, 310, 230, 39);
 		Game1_3.add(Game1_3AnsBlank);
 		Game1_3AnsBlank.setColumns(10);
 		
@@ -598,7 +598,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_4.add(Game1_4Score);
 		
 		Game1_4AnsBlank = new JTextField();
-		Game1_4AnsBlank.setBounds(153, 310, 147, 39);
+		Game1_4AnsBlank.setBounds(70, 310, 230, 39);
 		Game1_4.add(Game1_4AnsBlank);
 		Game1_4AnsBlank.setColumns(10);
 		
@@ -692,7 +692,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_5.add(Game1_5Score);
 		
 		Game1_5AnsBlank = new JTextField();
-		Game1_5AnsBlank.setBounds(153, 310, 147, 39);
+		Game1_5AnsBlank.setBounds(70, 310, 230, 39);
 		Game1_5.add(Game1_5AnsBlank);
 		Game1_5AnsBlank.setColumns(10);
 		
@@ -952,7 +952,7 @@ public class ChoSung_Game extends JFrame {
 		Game2_1.add(Game2_1AnsBtn);
 		
 		Game2_1AnsBlank = new JTextField("");
-		Game2_1AnsBlank.setBounds(153, 310, 147, 39);
+		Game2_1AnsBlank.setBounds(70, 310, 230, 39);
 		Game2_1.add(Game2_1AnsBlank);
 		Game2_1AnsBlank.setColumns(10);
 		
@@ -1055,7 +1055,7 @@ public class ChoSung_Game extends JFrame {
 		Game2_2.add(Game2_2AnsBtn);
 		
 		Game2_2AnsBlank = new JTextField();
-		Game2_2AnsBlank.setBounds(153, 310, 147, 39);
+		Game2_2AnsBlank.setBounds(70, 310, 230, 39);
 		Game2_2.add(Game2_2AnsBlank);
 		Game2_2AnsBlank.setColumns(10);
 		
@@ -1159,7 +1159,7 @@ public class ChoSung_Game extends JFrame {
 		
 		Game2_3AnsBlank = new JTextField();
 		Game2_3AnsBlank.setColumns(10);
-		Game2_3AnsBlank.setBounds(153, 310, 147, 39);
+		Game2_3AnsBlank.setBounds(70, 310, 230, 39);
 		Game2_3.add(Game2_3AnsBlank);
 		
 		// 문제 2_4
@@ -1262,7 +1262,7 @@ public class ChoSung_Game extends JFrame {
 		
 		Game2_4AnsBlank = new JTextField();
 		Game2_4AnsBlank.setColumns(10);
-		Game2_4AnsBlank.setBounds(153, 310, 147, 39);
+		Game2_4AnsBlank.setBounds(70, 310, 230, 39);
 		Game2_4.add(Game2_4AnsBlank);
 		
 		// 문제 2_5
@@ -1365,7 +1365,7 @@ public class ChoSung_Game extends JFrame {
 		
 		Game2_5AnsBlank = new JTextField();
 		Game2_5AnsBlank.setColumns(10);
-		Game2_5AnsBlank.setBounds(153, 310, 147, 39);
+		Game2_5AnsBlank.setBounds(70, 310, 230, 39);
 		Game2_5.add(Game2_5AnsBlank);
 		
 		// 테마2_음식 끝
@@ -1518,7 +1518,7 @@ public class ChoSung_Game extends JFrame {
 		
 		Game3_1AnsBlank = new JTextField("");
 		Game3_1AnsBlank.setColumns(10);
-		Game3_1AnsBlank.setBounds(153, 310, 147, 39);
+		Game3_1AnsBlank.setBounds(70, 310, 230, 39);
 		Game3_1.add(Game3_1AnsBlank);
 		
 		// 문제 3_2
@@ -1725,7 +1725,7 @@ public class ChoSung_Game extends JFrame {
 		
 		Game3_3AnsBlank = new JTextField();
 		Game3_3AnsBlank.setColumns(10);
-		Game3_3AnsBlank.setBounds(153, 310, 147, 39);
+		Game3_3AnsBlank.setBounds(70, 310, 230, 39);
 		Game3_3.add(Game3_3AnsBlank);
 		
 		// 문제 3_4
@@ -1829,7 +1829,7 @@ public class ChoSung_Game extends JFrame {
 		
 		Game3_4AnsBlank = new JTextField();
 		Game3_4AnsBlank.setColumns(10);
-		Game3_4AnsBlank.setBounds(153, 310, 147, 39);
+		Game3_4AnsBlank.setBounds(70, 310, 230, 39);
 		Game3_4.add(Game3_4AnsBlank);
 		
 		// 문제 3_5
@@ -1933,7 +1933,7 @@ public class ChoSung_Game extends JFrame {
 		
 		Game3_5AnsBlank = new JTextField();
 		Game3_5AnsBlank.setColumns(10);
-		Game3_5AnsBlank.setBounds(153, 310, 147, 39);
+		Game3_5AnsBlank.setBounds(70, 310, 230, 39);
 		Game3_5.add(Game3_5AnsBlank);
 		
 		// 테마3_동물 끝
