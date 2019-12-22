@@ -35,7 +35,10 @@ In other words, **ChoSung** refers to initial sound.
 7. **게임 방법**: 어떤 단어의 초성이 주어지면, 개발자가 지정해 놓은 단어로 답을 입력하여 점수를 획득하세요
 
 8. **게임 룰**: 문제를 맞춘 경우 +10점, 틀린 경우 -5점, 힌트 1 사용시 -3점, 힌트 2 사용시 -5점, 힌트 3 사용시 -7점 입니다 (힌트를 적절히 사용해 보세요)
-  
+
+9. **게임 실행 화면**:
+#
+<img src = "./image/ChoSung1.png" width="288" height = "400"><img src = "./image/ChoSung3.png" width="288" height = "400"><img src = "./image/ChoSung5.png" width="288" height = "400"><img src = "./image/ChoSung2.png" width="288" height = "400"><img src = "./image/ChoSung4.png" width="288" height = "400"><img src = "./image/ChoSung6.png" width="288" height = "400">
   
 ## [개발 기록 일지]
   
