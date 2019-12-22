@@ -20,7 +20,13 @@ import java.awt.SystemColor;
 
 public class ChoSung_Game extends JFrame {
 	
-	public int Score; // 총 점수
+	public int Tema1_Score = 0; // 테마 1 점수
+	public int Tema2_Score = 0; // 테마 2 점수
+	public int Tema3_Score = 0; // 테마 3 점수
+	
+	public int TemaScore = 0; // 테마 1, 2, 3 점수 합계
+	
+	public int EndPageScore = 0; // 테마 끝낼 때 마지막 페이지가 뜨기 위한 변수
 
 	private JPanel MainPage;
 	private JTextField Game1_1AnsBlank;
@@ -189,7 +195,7 @@ public class ChoSung_Game extends JFrame {
 		JButton Tema2_FoodBtn = new JButton("음식");
 		Tema2_FoodBtn.setBounds(270, 187, 97, 23);
 		SelectTemaPage.add(Tema2_FoodBtn);
-		
+		 
 		JButton Tema3_AnimalBtn = new JButton("동물");
 		Tema3_AnimalBtn.setBounds(270, 247, 97, 23);
 		SelectTemaPage.add(Tema3_AnimalBtn);
@@ -253,7 +259,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1_1.add(Game1_1Quiz);
 		
-		JLabel Game1_1Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game1_1Score = new JLabel("현재 점수 : " + Tema1_Score);
 		Game1_1Score.setBounds(307, 37, 168, 39);
 		Game1_1Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_1.add(Game1_1Score);
@@ -273,14 +279,14 @@ public class ChoSung_Game extends JFrame {
 		Game1_1Hint1.setBounds(520, 201, 97, 23);
 		Game1_1.add(Game1_1Hint1);
 		
-		Game1_1Hint1.addActionListener(new ActionListener() {
+		Game1_1Hint1.addActionListener(new ActionListener() { // 게임 1-1. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 1-1. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) { 
 				
 				JOptionPane.showMessageDialog(null, "한글", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game1_1Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 3;
+				Game1_1Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -295,8 +301,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "롯데", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game1_1Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 5;
+				Game1_1Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -311,8 +317,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "초콜릿", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game1_1Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 7;
+				Game1_1Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -351,7 +357,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1_2.add(Game1_2Quiz);
 		
-		JLabel Game1_2Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game1_2Score = new JLabel("현재 점수 : " + Tema1_Score);
 		Game1_2Score.setBounds(307, 37, 168, 39);
 		Game1_2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_2.add(Game1_2Score);
@@ -370,14 +376,14 @@ public class ChoSung_Game extends JFrame {
 		Game1_2Hint1.setBounds(520, 201, 97, 23);
 		Game1_2.add(Game1_2Hint1);
 		
-		Game1_2Hint1.addActionListener(new ActionListener() {
+		Game1_2Hint1.addActionListener(new ActionListener() { // 게임 1-2. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 1-2. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "은하수 (**교수님 아닙니다.)", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game1_2Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 3;
+				Game1_2Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -392,8 +398,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "노트", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game1_2Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 5;
+				Game1_2Score.setText("현재 점수 : " + Tema1_Score); 
 			}
 			
 		});
@@ -408,8 +414,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "핸드폰", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game1_2Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 7;
+				Game1_2Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -447,7 +453,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_3Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1_3.add(Game1_3Quiz);
 		
-		JLabel Game1_3Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game1_3Score = new JLabel("현재 점수 : " + Tema1_Score);
 		Game1_3Score.setBounds(307, 37, 168, 39);
 		Game1_3Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_3.add(Game1_3Score);
@@ -465,14 +471,14 @@ public class ChoSung_Game extends JFrame {
 		Game1_3Hint1.setBounds(520, 201, 97, 23);
 		Game1_3.add(Game1_3Hint1);
 		
-		Game1_3Hint1.addActionListener(new ActionListener() {
+		Game1_3Hint1.addActionListener(new ActionListener() { // 게임 1-3. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 1-3. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "돈", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game1_3Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 3;
+				Game1_3Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -487,8 +493,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "게임", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game1_3Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 5;
+				Game1_3Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -503,8 +509,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "메이플스토리는 뭐다? (돈슨이다..) ", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game1_3Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 7;
+				Game1_3Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -542,7 +548,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_4Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1_4.add(Game1_4Quiz);
 		
-		JLabel Game1_4Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game1_4Score = new JLabel("현재 점수 : " + Tema1_Score);
 		Game1_4Score.setBounds(307, 37, 168, 39);
 		Game1_4Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_4.add(Game1_4Score);
@@ -560,14 +566,14 @@ public class ChoSung_Game extends JFrame {
 		Game1_4Hint1.setBounds(520, 201, 97, 23);
 		Game1_4.add(Game1_4Hint1);
 		
-		Game1_4Hint1.addActionListener(new ActionListener() {
+		Game1_4Hint1.addActionListener(new ActionListener() { // 게임 1-4. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 1-4. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) { 
 				
 				JOptionPane.showMessageDialog(null, "가브리엘", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game1_4Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 3;
+				Game1_4Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -582,8 +588,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "가방", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game1_4Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 5;
+				Game1_4Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -598,8 +604,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "명품", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game1_4Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 7;
+				Game1_4Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -636,7 +642,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_5Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game1_5.add(Game1_5Quiz);
 		
-		JLabel Game1_5Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game1_5Score = new JLabel("현재 점수 : " + Tema1_Score);
 		Game1_5Score.setBounds(307, 37, 168, 39);
 		Game1_5Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game1_5.add(Game1_5Score);
@@ -654,14 +660,14 @@ public class ChoSung_Game extends JFrame {
 		Game1_5Hint1.setBounds(520, 201, 97, 23);
 		Game1_5.add(Game1_5Hint1);
 		
-		Game1_5Hint1.addActionListener(new ActionListener() {
+		Game1_5Hint1.addActionListener(new ActionListener() { // 게임 1-5. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 1-5. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) { 
 				
 				JOptionPane.showMessageDialog(null, "영어 스펠링 3개", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game1_5Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 3;
+				Game1_5Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -676,8 +682,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "국산", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game1_5Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 5;
+				Game1_5Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -692,8 +698,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "자동차", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game1_5Score.setText("현재 점수 : " + Score);
+				Tema1_Score -= 7;
+				Game1_5Score.setText("현재 점수 : " + Tema1_Score);
 			}
 			
 		});
@@ -720,7 +726,7 @@ public class ChoSung_Game extends JFrame {
 		Game1_End.setLayout(null);
 		
 		JLabel Game1_EndLabel = new JLabel("브랜드 테마 클리어 !");
-		Game1_EndLabel.setBounds(150, 127, 392, 78);
+		Game1_EndLabel.setBounds(112, 127, 430, 78);
 		Game1_EndLabel.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
 		Game1_End.add(Game1_EndLabel);
 		
@@ -732,6 +738,12 @@ public class ChoSung_Game extends JFrame {
 		Game1EndBackGround.setIcon(new ImageIcon(".image/ChoSungTemaEnd.png"));
 		Game1EndBackGround.setBounds(0, 0, 640, 370);
 		Game1_End.add(Game1EndBackGround);
+		
+		JLabel Game1_EndScore = new JLabel("현재 테마 1 점수: " + Tema1_Score);
+		Game1_EndScore.setHorizontalAlignment(SwingConstants.CENTER);
+		Game1_EndScore.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game1_EndScore.setBounds(112, 240, 436, 46);
+		Game1_End.add(Game1_EndScore);
 		
 		StartBackBtn1_2.addActionListener(new ActionListener() { // 문제 1-2 에서 시작 화면으로 돌아가는 버튼 활성화
 
@@ -803,7 +815,7 @@ public class ChoSung_Game extends JFrame {
 		Game2_1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game2_1.add(Game2_1Quiz);
 		
-		JLabel Game2_1Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game2_1Score = new JLabel("현재 점수 : " + Tema2_Score);
 		Game2_1Score.setBounds(307, 37, 168, 39);
 		Game2_1Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game2_1.add(Game2_1Score);
@@ -822,14 +834,14 @@ public class ChoSung_Game extends JFrame {
 		Game2_1Hint1.setBounds(520, 201, 97, 23);
 		Game2_1.add(Game2_1Hint1);
 		
-		Game2_1Hint1.addActionListener(new ActionListener() {
+		Game2_1Hint1.addActionListener(new ActionListener() { // 게임 2-1. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 2-1. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) { 
 				
 				JOptionPane.showMessageDialog(null, "야채범벅", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game2_1Score.setText("현재 점수 : " + Score);
+				Tema2_Score -= 3;
+				Game2_1Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -844,8 +856,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "고기", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game2_1Score.setText("현재 점수 : " + Score);
+				Tema2_Score -= 5;
+				Game2_1Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -860,8 +872,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "중국집", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game2_1Score.setText("현재 점수 : " + Score);
+				Tema2_Score -= 7;
+				Game2_1Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -906,7 +918,7 @@ public class ChoSung_Game extends JFrame {
 		Game2_2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game2_2.add(Game2_2Quiz);
 		
-		JLabel Game2_2Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game2_2Score = new JLabel("현재 점수 : " + Tema2_Score);
 		Game2_2Score.setBounds(307, 37, 168, 39);
 		Game2_2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game2_2.add(Game2_2Score);
@@ -925,14 +937,14 @@ public class ChoSung_Game extends JFrame {
 		Game2_2Hint1.setBounds(520, 201, 97, 23);
 		Game2_2.add(Game2_2Hint1);
 		
-		Game2_2Hint1.addActionListener(new ActionListener() {
+		Game2_2Hint1.addActionListener(new ActionListener() { // 게임 2-2. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 2-2. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "나무", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game2_2Score.setText("현재 점수 : " + Score);
+				Tema2_Score -= 3;
+				Game2_2Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -947,8 +959,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "초록색", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game2_2Score.setText("현재 점수 : " + Score);
+				Tema2_Score -= 5;
+				Game2_2Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -963,8 +975,8 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				JOptionPane.showMessageDialog(null, "널 깨물어 주고 싶엉 >_<♥", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game2_2Score.setText("현재 점수 : " + Score);
+				Tema2_Score -= 7;
+				Game2_2Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1009,7 +1021,7 @@ public class ChoSung_Game extends JFrame {
 		Game2_3Quiz.setBounds(185, 159, 81, 87);
 		Game2_3.add(Game2_3Quiz);
 		
-		JLabel Game2_3Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game2_3Score = new JLabel("현재 점수 : " + Tema2_Score);
 		Game2_3Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game2_3Score.setBounds(307, 37, 168, 39);
 		Game2_3.add(Game2_3Score);
@@ -1028,14 +1040,14 @@ public class ChoSung_Game extends JFrame {
 		Game2_3Hint1.setBounds(520, 201, 97, 23);
 		Game2_3.add(Game2_3Hint1);
 		
-		Game2_3Hint1.addActionListener(new ActionListener() {
+		Game2_3Hint1.addActionListener(new ActionListener() { // 게임 2-3. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 2-3. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game2_3Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "숲", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 3;
+				Game2_3Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1049,9 +1061,9 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game2_3Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "초코송이", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 5;
+				Game2_3Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1065,9 +1077,9 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game2_3Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "벗엇", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 7;
+				Game2_3Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1107,12 +1119,12 @@ public class ChoSung_Game extends JFrame {
 		StepGame2_4.setBounds(38, 33, 90, 39);
 		Game2_4.add(StepGame2_4);
 		
-		JLabel Game2_4Quiz = new JLabel("??");
+		JLabel Game2_4Quiz = new JLabel("ㄱㅅ");
 		Game2_4Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game2_4Quiz.setBounds(185, 159, 81, 87);
 		Game2_4.add(Game2_4Quiz);
 		
-		JLabel Game2_4Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game2_4Score = new JLabel("현재 점수 : " + Tema2_Score);
 		Game2_4Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game2_4Score.setBounds(307, 37, 168, 39);
 		Game2_4.add(Game2_4Score);
@@ -1131,14 +1143,14 @@ public class ChoSung_Game extends JFrame {
 		Game2_4Hint1.setBounds(520, 201, 97, 23);
 		Game2_4.add(Game2_4Hint1);
 		
-		Game2_4Hint1.addActionListener(new ActionListener() {
+		Game2_4Hint1.addActionListener(new ActionListener() { // 게임 2-4. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 2-4. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) { 
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game2_4Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "밀가루", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 3;
+				Game2_4Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1152,9 +1164,9 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game2_4Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "후루룹-", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 5;
+				Game2_4Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1168,9 +1180,9 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game2_4Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "면", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 7;
+				Game2_4Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1210,12 +1222,12 @@ public class ChoSung_Game extends JFrame {
 		StepGame2_5.setBounds(38, 33, 90, 39);
 		Game2_5.add(StepGame2_5);
 		
-		JLabel Game2_5Quiz = new JLabel("??");
+		JLabel Game2_5Quiz = new JLabel("ㄱㅊ");
 		Game2_5Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game2_5Quiz.setBounds(185, 159, 81, 87);
 		Game2_5.add(Game2_5Quiz);
 		
-		JLabel Game2_5Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game2_5Score = new JLabel("현재 점수 : " + Tema2_Score);
 		Game2_5Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game2_5Score.setBounds(307, 37, 168, 39);
 		Game2_5.add(Game2_5Score);
@@ -1234,14 +1246,14 @@ public class ChoSung_Game extends JFrame {
 		Game2_5Hint1.setBounds(520, 201, 97, 23);
 		Game2_5.add(Game2_5Hint1);
 		
-		Game2_5Hint1.addActionListener(new ActionListener() {
+		Game2_5Hint1.addActionListener(new ActionListener() { // 게임 2-5. 힌트 1 버튼 활성화
 
 			@Override
-			public void actionPerformed(ActionEvent e) { // 게임 2-5. 힌트 1 버튼 활성화
+			public void actionPerformed(ActionEvent e) { 
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 1", JOptionPane.PLAIN_MESSAGE);
-				Score -= 3;
-				Game2_5Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "보통 매움", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 3;
+				Game2_5Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1255,9 +1267,9 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 2", JOptionPane.PLAIN_MESSAGE);
-				Score -= 5;
-				Game2_5Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "발효", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 5;
+				Game2_5Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1271,9 +1283,9 @@ public class ChoSung_Game extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				JOptionPane.showMessageDialog(null, "???", "힌트 3", JOptionPane.PLAIN_MESSAGE);
-				Score -= 7;
-				Game2_5Score.setText("현재 점수 : " + Score);
+				JOptionPane.showMessageDialog(null, "한국 전통", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema2_Score -= 7;
+				Game2_5Score.setText("현재 점수 : " + Tema2_Score);
 			}
 			
 		});
@@ -1318,6 +1330,12 @@ public class ChoSung_Game extends JFrame {
 		Game2EndBackGround.setBounds(0, 0, 640, 370);
 		Game2_End.add(Game2EndBackGround);
 		
+		JLabel Game2_EndScore = new JLabel("현재 테마 2 점수: " + Tema1_Score);
+		Game2_EndScore.setHorizontalAlignment(SwingConstants.CENTER);
+		Game2_EndScore.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game2_EndScore.setBounds(112, 240, 436, 46);
+		Game2_End.add(Game2_EndScore);
+		
 		JButton StartBackBtn2_End = new JButton("시작 화면으로");
 		StartBackBtn2_End.setBounds(501, 44, 116, 31);
 		Game2_End.add(StartBackBtn2_End);
@@ -1334,12 +1352,12 @@ public class ChoSung_Game extends JFrame {
 		StepGame3_1.setBounds(38, 33, 90, 39);
 		Game3_1.add(StepGame3_1);
 		
-		JLabel Game3_1Quiz = new JLabel("??");
+		JLabel Game3_1Quiz = new JLabel("ㄱㅇㅇ");
 		Game3_1Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game3_1Quiz.setBounds(185, 159, 150, 87);
 		Game3_1.add(Game3_1Quiz);
 		
-		JLabel Game3_1Score = new JLabel("현재 점수 " + Score);
+		JLabel Game3_1Score = new JLabel("현재 점수 :  " + Tema3_Score);
 		Game3_1Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game3_1Score.setBounds(307, 37, 168, 39);
 		Game3_1.add(Game3_1Score);
@@ -1358,13 +1376,49 @@ public class ChoSung_Game extends JFrame {
 		Game3_1Hint1.setBounds(520, 201, 97, 23);
 		Game3_1.add(Game3_1Hint1);
 		
+		Game3_1Hint1.addActionListener(new ActionListener() { // 게임 3-1. 힌트 1 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "점프 달인", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 3;
+				Game3_1Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_1Hint2 = new JButton("힌트 2");
 		Game3_1Hint2.setBounds(520, 252, 97, 23);
 		Game3_1.add(Game3_1Hint2);
 		
+		Game3_1Hint2.addActionListener(new ActionListener() { // 게임 3-1. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "참치", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 5;
+				Game3_1Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_1Hint3 = new JButton("힌트 3");
 		Game3_1Hint3.setBounds(520, 308, 97, 23);
 		Game3_1.add(Game3_1Hint3);
+		
+		Game3_1Hint3.addActionListener(new ActionListener() { // 게임 3-1. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "냐옹-", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 7;
+				Game3_1Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
 		
 		JButton StartBackBtn3_1 = new JButton("시작 화면으로");
 		StartBackBtn3_1.setBounds(501, 44, 116, 31);
@@ -1401,12 +1455,12 @@ public class ChoSung_Game extends JFrame {
 		StepGame3_2.setBounds(38, 33, 90, 39);
 		Game3_2.add(StepGame3_2);
 		
-		JLabel Game3_2Quiz = new JLabel("??");
+		JLabel Game3_2Quiz = new JLabel("ㄱㅅㄷㅊ");
 		Game3_2Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game3_2Quiz.setBounds(185, 159, 150, 87);
 		Game3_2.add(Game3_2Quiz);
 		
-		JLabel Game3_2Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game3_2Score = new JLabel("현재 점수 : " + Tema3_Score);
 		Game3_2Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game3_2Score.setBounds(307, 37, 168, 39);
 		Game3_2.add(Game3_2Score);
@@ -1425,13 +1479,50 @@ public class ChoSung_Game extends JFrame {
 		Game3_2Hint1.setBounds(520, 201, 97, 23);
 		Game3_2.add(Game3_2Hint1);
 		
+		Game3_2Hint1.addActionListener(new ActionListener() { // 게임 3-2. 힌트 1 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "곤충도 잘먹어욤- 옴뇸뇸", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 3;
+				Game3_2Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+
+		
 		JButton Game3_2Hint2 = new JButton("힌트 2");
 		Game3_2Hint2.setBounds(520, 252, 97, 23);
 		Game3_2.add(Game3_2Hint2);
 		
+		Game3_2Hint2.addActionListener(new ActionListener() { // 게임 3-2. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "뾰족뾰족", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 5;
+				Game3_2Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_2Hint3 = new JButton("힌트 3");
 		Game3_2Hint3.setBounds(520, 308, 97, 23);
 		Game3_2.add(Game3_2Hint3);
+		
+		Game3_2Hint3.addActionListener(new ActionListener() { // 게임 3-2. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "도치", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 7;
+				Game3_2Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
 		
 		JButton StartBackBtn3_2 = new JButton("시작 화면으로");
 		StartBackBtn3_2.setBounds(501, 44, 116, 31);
@@ -1468,12 +1559,12 @@ public class ChoSung_Game extends JFrame {
 		StepGame3_3.setBounds(38, 33, 90, 39);
 		Game3_3.add(StepGame3_3);
 		
-		JLabel Game3_3Quiz = new JLabel("??");
+		JLabel Game3_3Quiz = new JLabel("ㅍㄱ");
 		Game3_3Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game3_3Quiz.setBounds(185, 159, 81, 87);
 		Game3_3.add(Game3_3Quiz);
 		
-		JLabel Game3_3Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game3_3Score = new JLabel("현재 점수 : " + Tema3_Score);
 		Game3_3Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game3_3Score.setBounds(307, 37, 168, 39);
 		Game3_3.add(Game3_3Score);
@@ -1492,13 +1583,49 @@ public class ChoSung_Game extends JFrame {
 		Game3_3Hint1.setBounds(520, 201, 97, 23);
 		Game3_3.add(Game3_3Hint1);
 		
+		Game3_3Hint1.addActionListener(new ActionListener() { // 게임 3-3. 힌트 1 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) { 
+				
+				JOptionPane.showMessageDialog(null, "빙하", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 3;
+				Game3_3Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_3Hint2 = new JButton("힌트 2");
 		Game3_3Hint2.setBounds(520, 252, 97, 23);
 		Game3_3.add(Game3_3Hint2);
 		
+		Game3_3Hint2.addActionListener(new ActionListener() { // 게임 3-3. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "EBS", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 5;
+				Game3_3Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_3Hint3 = new JButton("힌트 3");
 		Game3_3Hint3.setBounds(520, 308, 97, 23);
 		Game3_3.add(Game3_3Hint3);
+		
+		Game3_3Hint3.addActionListener(new ActionListener() { // 게임 3-3. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "펭수", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 7;
+				Game3_3Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
 		
 		JButton StartBackBtn3_3 = new JButton("시작 화면으로");
 		StartBackBtn3_3.setBounds(501, 44, 116, 31);
@@ -1515,7 +1642,7 @@ public class ChoSung_Game extends JFrame {
 		});
 		
 		JButton Game3_3AnsBtn = new JButton("제출 하기");
-		Game3_3AnsBtn.setBounds(340, 352, 121, 39);
+		Game3_3AnsBtn.setBounds(340, 310, 121, 39);
 		Game3_3.add(Game3_3AnsBtn);
 		
 		Game3_3AnsBlank = new JTextField();
@@ -1535,12 +1662,12 @@ public class ChoSung_Game extends JFrame {
 		StepGame3_4.setBounds(38, 33, 90, 39);
 		Game3_4.add(StepGame3_4);
 		
-		JLabel Game3_4Quiz = new JLabel("??");
+		JLabel Game3_4Quiz = new JLabel("ㄴㄱㄹ");
 		Game3_4Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game3_4Quiz.setBounds(185, 159, 81, 87);
 		Game3_4.add(Game3_4Quiz);
 		
-		JLabel Game3_4Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game3_4Score = new JLabel("현재 점수 : " + Tema3_Score);
 		Game3_4Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game3_4Score.setBounds(307, 37, 168, 39);
 		Game3_4.add(Game3_4Score);
@@ -1559,13 +1686,50 @@ public class ChoSung_Game extends JFrame {
 		Game3_4Hint1.setBounds(520, 201, 97, 23);
 		Game3_4.add(Game3_4Hint1);
 		
+		Game3_4Hint1.addActionListener(new ActionListener() { // 게임 3-4. 힌트 1 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "페북 유명 페이지 이름", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 3;
+				Game3_4Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_4Hint2 = new JButton("힌트 2");
 		Game3_4Hint2.setBounds(520, 252, 97, 23);
 		Game3_4.add(Game3_4Hint2);
 		
+		Game3_4Hint2.addActionListener(new ActionListener() { // 게임 3-4. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "야행성", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 5;
+				Game3_4Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_4Hint3 = new JButton("힌트 3");
 		Game3_4Hint3.setBounds(520, 308, 97, 23);
 		Game3_4.add(Game3_4Hint3);
+		
+		Game3_4Hint3.addActionListener(new ActionListener() { // 게임 3-4. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "농심 OOO~, OOO 한 마리 몰고가세요~", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 7;
+				Game3_4Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+
 		
 		JButton StartBackBtn3_4 = new JButton("시작 화면으로");
 		StartBackBtn3_4.setBounds(501, 44, 116, 31);
@@ -1602,12 +1766,12 @@ public class ChoSung_Game extends JFrame {
 		StepGame3_5.setBounds(38, 33, 90, 39);
 		Game3_5.add(StepGame3_5);
 		
-		JLabel Game3_5Quiz = new JLabel("??");
+		JLabel Game3_5Quiz = new JLabel("ㅇㅇ");
 		Game3_5Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
 		Game3_5Quiz.setBounds(185, 159, 81, 87);
 		Game3_5.add(Game3_5Quiz);
 		
-		JLabel Game3_5Score = new JLabel("현재 점수 : " + Score);
+		JLabel Game3_5Score = new JLabel("현재 점수 : " + Tema3_Score);
 		Game3_5Score.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
 		Game3_5Score.setBounds(307, 37, 168, 39);
 		Game3_5.add(Game3_5Score);
@@ -1622,17 +1786,54 @@ public class ChoSung_Game extends JFrame {
 		Game3_5BackGround.setBounds(0, 0, 640, 370);
 		Game3_5.add(Game3_5BackGround);
 		
-		JButton Game3_5HInt1 = new JButton("힌트 1");
-		Game3_5HInt1.setBounds(520, 201, 97, 23);
-		Game3_5.add(Game3_5HInt1);
+		JButton Game3_5Hint1 = new JButton("힌트 1");
+		Game3_5Hint1.setBounds(520, 201, 97, 23);
+		Game3_5.add(Game3_5Hint1);
+		
+		Game3_5Hint1.addActionListener(new ActionListener() { // 게임 3-5. 힌트 1 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) { 
+				
+				JOptionPane.showMessageDialog(null, "북극", "힌트 1", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 3;
+				Game3_5Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
 		
 		JButton Game3_5Hint2 = new JButton("힌트 2");
 		Game3_5Hint2.setBounds(520, 252, 97, 23);
 		Game3_5.add(Game3_5Hint2);
 		
+		Game3_5Hint2.addActionListener(new ActionListener() { // 게임 3-5. 힌트 2 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "사막", "힌트 2", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 5;
+				Game3_5Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+		
 		JButton Game3_5Hint3 = new JButton("힌트 3");
 		Game3_5Hint3.setBounds(520, 308, 97, 23);
 		Game3_5.add(Game3_5Hint3);
+		
+		Game3_5Hint3.addActionListener(new ActionListener() { // 게임 3-5. 힌트 3 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "어장관리 심한 여자를 일컫는 말 → OO년 ", "힌트 3", JOptionPane.PLAIN_MESSAGE);
+				Tema3_Score -= 7;
+				Game3_5Score.setText("현재 점수 : " + Tema3_Score);
+			}
+			
+		});
+
 		
 		JButton StartBackBtn3_5 = new JButton("시작 화면으로");
 		StartBackBtn3_5.setBounds(501, 44, 116, 31);
@@ -1674,6 +1875,12 @@ public class ChoSung_Game extends JFrame {
 		Game3EndBackGround.setBounds(0, 0, 640, 370);
 		Game3_End.add(Game3EndBackGround);
 		
+		JLabel Game3_EndScore = new JLabel("현재 테마 3 점수: " + Tema3_Score);
+		Game3_EndScore.setHorizontalAlignment(SwingConstants.CENTER);
+		Game3_EndScore.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 20));
+		Game3_EndScore.setBounds(112, 240, 436, 46);
+		Game3_End.add(Game3_EndScore);
+		
 		JButton StartBackBtn3_End = new JButton("시작 화면으로");
 		StartBackBtn3_End.setBounds(501, 44, 116, 31);
 		Game3_End.add(StartBackBtn3_End);
@@ -1685,14 +1892,14 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "가나";
 				if(Answer.equals(Game1_1AnsBlank.getText())) {
-					Score += 10;
+					Tema1_Score += 10;
 					Game1_1.setVisible(false);
 					Game1_2.setVisible(true);
-					Game1_2Score.setText("현재 점수 : " + Score);
+					Game1_2Score.setText("현재 점수 : " + Tema1_Score);
 				}
 				else {
-					Score -= 5;
-					Game1_1Score.setText("현재 점수 : " + Score);
+					Tema1_Score -= 5;
+					Game1_1Score.setText("현재 점수 : " + Tema1_Score);
 				}
 				
 				
@@ -1706,14 +1913,14 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "삼성";
 				if(Answer.equals(Game1_2AnsBlank.getText())) {
-					Score += 10;
+					Tema1_Score += 10;
 					Game1_2.setVisible(false);
 					Game1_3.setVisible(true);
-					Game1_3Score.setText("현재 점수 : " + Score);
+					Game1_3Score.setText("현재 점수 : " + Tema1_Score);
 				}
 				else {
-					Score -= 5;
-					Game1_2Score.setText("현재 점수 : " + Score);
+					Tema1_Score -= 5;
+					Game1_2Score.setText("현재 점수 : " + Tema1_Score);
 				}
 			}
 			
@@ -1725,14 +1932,14 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "넥슨";
 				if(Answer.equals(Game1_3AnsBlank.getText())) {
-					Score += 10;
+					Tema1_Score += 10;
 					Game1_3.setVisible(false);
 					Game1_4.setVisible(true);
-					Game1_4Score.setText("현재 점수 : " + Score);
+					Game1_4Score.setText("현재 점수 : " + Tema1_Score);
 				}
 				else {
-					Score -= 5;
-					Game1_3Score.setText("현재 점수 : " + Score);
+					Tema1_Score -= 5;
+					Game1_3Score.setText("현재 점수 : " + Tema1_Score);
 				}
 			}
 			
@@ -1744,14 +1951,14 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "샤넬";
 				if(Answer.equals(Game1_4AnsBlank.getText())) {
-					Score += 10;
+					Tema1_Score += 10;
 					Game1_4.setVisible(false);
 					Game1_5.setVisible(true);
-					Game1_5Score.setText("현재 점수 : " + Score);
+					Game1_5Score.setText("현재 점수 : " + Tema1_Score);
 				}
 				else {
-					Score -= 5;
-					Game1_4Score.setText("현재 점수 : " + Score);
+					Tema1_Score -= 5;
+					Game1_4Score.setText("현재 점수 : " + Tema1_Score);
 				}
 			}
 			
@@ -1763,14 +1970,16 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "기아";
 				if(Answer.equals(Game1_5AnsBlank.getText())) {
-					Score += 10;
+					Tema1_Score += 10;
 					Game1_5.setVisible(false);
 					Game1_End.setVisible(true);
+					Game1_EndScore.setText("테마1 현재 점수 : " + Tema1_Score);
+					EndPageScore += 1;
 					
 				}
 				else {
-					Score -= 5;
-					Game1_5Score.setText("현재 점수 : " + Score);
+					Tema1_Score -= 5;
+					Game1_5Score.setText("현재 점수 : " + Tema1_Score);
 				}
 			}
 			
@@ -1784,14 +1993,14 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "탕수육";
 				if(Answer.equals(Game2_1AnsBlank.getText())) {
-					Score += 10;
+					Tema2_Score += 10;
 					Game2_1.setVisible(false);
 					Game2_2.setVisible(true);
-					Game2_2Score.setText("현재 점수 : " + Score);
+					Game2_2Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				else {
-					Score -= 5;
-					Game2_1Score.setText("현재 점수 : " + Score);
+					Tema2_Score -= 5;
+					Game2_1Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				
 				
@@ -1805,14 +2014,14 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "매실";
 				if(Answer.equals(Game2_2AnsBlank.getText())) {
-					Score += 10;
+					Tema2_Score += 10;
 					Game2_2.setVisible(false);
 					Game2_3.setVisible(true);
-					Game2_3Score.setText("현재 점수 : " + Score);
+					Game2_3Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				else {
-					Score -= 5;
-					Game2_2Score.setText("현재 점수 : " + Score);
+					Tema2_Score -= 5;
+					Game2_2Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				
 				
@@ -1826,14 +2035,14 @@ public class ChoSung_Game extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String Answer = "버섯";
 				if(Answer.equals(Game2_3AnsBlank.getText())) {
-					Score += 10;
+					Tema2_Score += 10;
 					Game2_3.setVisible(false);
 					Game2_4.setVisible(true);
-					Game2_4Score.setText("현재 점수 : " + Score);
+					Game2_4Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				else {
-					Score -= 5;
-					Game2_3Score.setText("현재 점수 : " + Score);
+					Tema2_Score -= 5;
+					Game2_3Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				
 				
@@ -1845,16 +2054,16 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String Answer = "매실";
+				String Answer = "국수";
 				if(Answer.equals(Game2_4AnsBlank.getText())) {
-					Score += 10;
+					Tema2_Score += 10;
 					Game2_4.setVisible(false);
 					Game2_5.setVisible(true);
-					Game2_5Score.setText("현재 점수 : " + Score);
+					Game2_5Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				else {
-					Score -= 5;
-					Game2_4Score.setText("현재 점수 : " + Score);
+					Tema2_Score -= 5;
+					Game2_4Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				
 				
@@ -1866,15 +2075,17 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String Answer = "???";
+				String Answer = "김치";
 				if(Answer.equals(Game2_5AnsBlank.getText())) {
-					Score += 10;
+					Tema2_Score += 10;
 					Game2_5.setVisible(false);
 					Game2_End.setVisible(true);
+					Game2_EndScore.setText("테마2 현재 점수 : " + Tema2_Score);
+					EndPageScore += 1;
 				}
 				else {
-					Score -= 5;
-					Game2_5Score.setText("현재 점수 : " + Score);
+					Tema2_Score -= 5;
+					Game2_5Score.setText("현재 점수 : " + Tema2_Score);
 				}
 				
 				
@@ -1886,16 +2097,16 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String Answer = "???";
+				String Answer = "고양이";
 				if(Answer.equals(Game3_1AnsBlank.getText())) {
-					Score += 10;
+					Tema3_Score += 10;
 					Game3_1.setVisible(false);
 					Game3_2.setVisible(true);
-					Game3_2Score.setText("현재 점수 : " + Score);
+					Game3_2Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				else {
-					Score -= 5;
-					Game3_1Score.setText("현재 점수 : " + Score);
+					Tema3_Score -= 5;
+					Game3_1Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				
 				
@@ -1907,16 +2118,16 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String Answer = "???";
+				String Answer = "고슴도치";
 				if(Answer.equals(Game3_2AnsBlank.getText())) {
-					Score += 10;
+					Tema3_Score += 10;
 					Game3_2.setVisible(false);
 					Game3_3.setVisible(true);
-					Game3_3Score.setText("현재 점수 : " + Score);
+					Game3_3Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				else {
-					Score -= 5;
-					Game3_2Score.setText("현재 점수 : " + Score);
+					Tema3_Score -= 5;
+					Game3_2Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				
 				
@@ -1928,16 +2139,16 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String Answer = "???";
+				String Answer = "펭귄";
 				if(Answer.equals(Game3_3AnsBlank.getText())) {
-					Score += 10;
+					Tema3_Score += 10;
 					Game3_2.setVisible(false);
 					Game3_3.setVisible(true);
-					Game3_3Score.setText("현재 점수 : " + Score);
+					Game3_3Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				else {
-					Score -= 5;
-					Game3_3Score.setText("현재 점수 : " + Score);
+					Tema3_Score -= 5;
+					Game3_3Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				
 				
@@ -1949,16 +2160,16 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String Answer = "???";
+				String Answer = "너구리";
 				if(Answer.equals(Game3_4AnsBlank.getText())) {
-					Score += 10;
+					Tema3_Score += 10;
 					Game3_4.setVisible(false);
 					Game3_5.setVisible(true);
-					Game3_5Score.setText("현재 점수 : " + Score);
+					Game3_5Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				else {
-					Score -= 5;
-					Game3_4Score.setText("현재 점수 : " + Score);
+					Tema3_Score -= 5;
+					Game3_4Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				
 				
@@ -1970,15 +2181,17 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String Answer = "???";
+				String Answer = "여우";
 				if(Answer.equals(Game3_5AnsBlank.getText())) {
-					Score += 10;
+					Tema3_Score += 10;
 					Game3_5.setVisible(false);
 					Game3_End.setVisible(true);
+					Game3_EndScore.setText("테마3 현재 점수 : " + Tema3_Score);
+					EndPageScore += 1;
 				}
 				else {
-					Score -= 5;
-					Game3_5Score.setText("현재 점수 : " + Score);
+					Tema3_Score -= 5;
+					Game3_5Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				
 				
@@ -2030,6 +2243,7 @@ public class ChoSung_Game extends JFrame {
 			}
 			
 		});
+		
 		
 		
 		
