@@ -93,9 +93,9 @@ public class ChoSung_Game extends JFrame {
 		StartPage.setLayout(null);
 		
 		JLabel StartLabel = new JLabel("");
+		StartLabel.setBounds(28, 108, 590, 81);
 		StartLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		StartLabel.setIcon(new ImageIcon("./image/StartPageTitle.png"));
-		StartLabel.setBounds(28, 108, 590, 81);
 		StartPage.add(StartLabel);
 		
 		JButton StartBtn = new JButton("게임 시작");
@@ -108,9 +108,9 @@ public class ChoSung_Game extends JFrame {
 		
 		ImageIcon image = new ImageIcon("ChoSung_BackGreound.jpg"); // 게임 시작 이미지
 		JLabel StartBackGround = new JLabel(new ImageIcon("./image/ChoSungGif3.gif"));
+		StartBackGround.setBounds(0, 0, 640, 370);
 		StartBackGround.setVerticalAlignment(SwingConstants.TOP);
 		StartBackGround.setHorizontalAlignment(SwingConstants.LEFT);
-		StartBackGround.setBounds(0, 0, 640, 370);
 		StartPage.add(StartBackGround);
 		
 		StartBtn.addActionListener(new ActionListener() { // 게임 시작 버튼 활성화
@@ -232,6 +232,45 @@ public class ChoSung_Game extends JFrame {
 		GameTema3_Animal.setLayout(null);
 		
 		GameTema3_Animal.setVisible(false);
+		
+		// 게임 끝 페이지
+		
+		JPanel GameTheEndPage = new JPanel();
+		GameTheEndPage.setBounds(0, 0, 640, 370);
+		MainPage.add(GameTheEndPage);
+		GameTheEndPage.setLayout(null);
+		GameTheEndPage.setVisible(false);
+		
+		JButton GameTheEndBtn = new JButton("게임 종료");
+		GameTheEndBtn.setBounds(254, 300, 136, 23);
+		GameTheEndPage.add(GameTheEndBtn);
+		
+		JLabel GameTheEndLabel_1 = new JLabel("모두 클리어 하셨습니다!");
+		GameTheEndLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		GameTheEndLabel_1.setFont(new Font("한컴산뜻돋움", Font.BOLD, 45));
+		GameTheEndLabel_1.setBounds(40, 190, 563, 71);
+		GameTheEndPage.add(GameTheEndLabel_1);
+		
+		JLabel GameTheEndLabel_2 = new JLabel("총 점수 : " + TemaScore + "점으로");
+		GameTheEndLabel_2.setFont(new Font("한컴산뜻돋움", Font.BOLD, 25));
+		GameTheEndLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		GameTheEndLabel_2.setBounds(80, 150, 483, 47);
+		GameTheEndPage.add(GameTheEndLabel_2);
+		
+		JLabel GameTheEndLabel_3 = new JLabel("테마 1 점수 :" + Tema1_Score + "점         테마 2 점수 : " + Tema2_Score + "점         테마 3 점수 : " + Tema3_Score + "점");
+		GameTheEndLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		GameTheEndLabel_3.setFont(new Font("한컴산뜻돋움", Font.PLAIN, 18));
+		GameTheEndLabel_3.setBounds(0, 70, 640, 47);
+		GameTheEndPage.add(GameTheEndLabel_3);
+		
+		GameTheEndBtn.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+			
+				System.exit(0);
+			}
+			
+		});
 		
 		// 문제 1_1
 	
@@ -789,8 +828,19 @@ public class ChoSung_Game extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				GameTema1_Brand.setVisible(false);
-				StartPage.setVisible(true);
+				
+				if(EndPageScore == 3) {
+					int temp = Tema1_Score + Tema2_Score + Tema3_Score;
+					GameTheEndLabel_2.setText("총 점수 : " + temp + "점으로");
+					GameTheEndLabel_3.setText("테마 1 점수 :" + Tema1_Score + "점         테마 2 점수 : " + Tema2_Score + "점         테마 3 점수 : " + Tema3_Score + "점");
+					GameTema1_Brand.setVisible(false);
+					GameTheEndPage.setVisible(true);
+				}
+				
+				else {
+					GameTema1_Brand.setVisible(false);
+					StartPage.setVisible(true);
+				}
 			}
 			
 		});
@@ -1340,6 +1390,29 @@ public class ChoSung_Game extends JFrame {
 		StartBackBtn2_End.setBounds(501, 44, 116, 31);
 		Game2_End.add(StartBackBtn2_End);
 		
+		StartBackBtn2_End.addActionListener(new ActionListener() { // 문제 2-End 에서 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				if(EndPageScore == 3) {
+					int temp = Tema1_Score + Tema2_Score + Tema3_Score;
+					GameTheEndLabel_2.setText("총 점수 : " + temp + "점으로");
+					GameTheEndLabel_3.setText("테마 1 점수 :" + Tema1_Score + "점         테마 2 점수 : " + Tema2_Score + "점         테마 3 점수 : " + Tema3_Score + "점");
+					GameTema2_Food.setVisible(false);
+					GameTheEndPage.setVisible(true);
+				}
+				
+				else {
+					GameTema2_Food.setVisible(false);
+					StartPage.setVisible(true);
+					
+				}
+				
+			}
+			
+		});
+		
 		// 문제 3_1
 		
 		JPanel Game3_1 = new JPanel();
@@ -1664,7 +1737,7 @@ public class ChoSung_Game extends JFrame {
 		
 		JLabel Game3_4Quiz = new JLabel("ㄴㄱㄹ");
 		Game3_4Quiz.setFont(new Font("한컴산뜻돋움", Font.BOLD, 40));
-		Game3_4Quiz.setBounds(185, 159, 81, 87);
+		Game3_4Quiz.setBounds(185, 159, 159, 87);
 		Game3_4.add(Game3_4Quiz);
 		
 		JLabel Game3_4Score = new JLabel("현재 점수 : " + Tema3_Score);
@@ -1885,6 +1958,28 @@ public class ChoSung_Game extends JFrame {
 		StartBackBtn3_End.setBounds(501, 44, 116, 31);
 		Game3_End.add(StartBackBtn3_End);
 		
+		StartBackBtn3_End.addActionListener(new ActionListener() { // 시작 화면으로 돌아가는 버튼 활성화
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				if(EndPageScore == 3) {
+					int temp = Tema1_Score + Tema2_Score + Tema3_Score;
+					GameTheEndLabel_2.setText("총 점수 : " + temp + "점으로");
+					GameTheEndLabel_3.setText("테마 1 점수 :" + Tema1_Score + "점         테마 2 점수 : " + Tema2_Score + "점         테마 3 점수 : " + Tema3_Score + "점");
+					GameTema3_Animal.setVisible(false);
+					GameTheEndPage.setVisible(true);
+				}
+				
+				else {
+					GameTema3_Animal.setVisible(false);
+					StartPage.setVisible(true);
+				}
+				
+			}
+			
+		});
+	
 		
 		Game1_1AnsBtn.addActionListener(new ActionListener() { // 브랜드 테마 - 문제 1_1 정답 확인
 
@@ -2142,9 +2237,9 @@ public class ChoSung_Game extends JFrame {
 				String Answer = "펭귄";
 				if(Answer.equals(Game3_3AnsBlank.getText())) {
 					Tema3_Score += 10;
-					Game3_2.setVisible(false);
-					Game3_3.setVisible(true);
-					Game3_3Score.setText("현재 점수 : " + Tema3_Score);
+					Game3_3.setVisible(false);
+					Game3_4.setVisible(true);
+					Game3_4Score.setText("현재 점수 : " + Tema3_Score);
 				}
 				else {
 					Tema3_Score -= 5;
